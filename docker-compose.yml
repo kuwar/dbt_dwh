@@ -1,0 +1,52 @@
+---
+version: '3.9'
+
+# Define reusable configuration as an anchor
+x-dbt-config: &dbt-config
+  build:
+    context: .
+    dockerfile: dbt.Dockerfile
+  volumes:
+    - ./dbt_project:/usr/app/dbt_project
+  environment:
+    - DBT_PROFILE_TARGET=${DBT_PROFILE_TARGET}
+    - POSTGRES_HOST=${POSTGRES_HOST}  # Matches the service name of the Postgres container
+    - POSTGRES_USER=${POSTGRES_USER}
+    - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    - POSTGRES_DB=${POSTGRES_DB}
+    - POSTGRES_PORT=${POSTGRES_PORT}
+
+services:
+  postgres:
+    image: postgres:17
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+    ports:
+      - "${POSTGRES_PORT_HOST_MACHINE}:${POSTGRES_PORT}"
+    volumes:
+      # - ./conf/postgres/postgresql.conf:/etc/postgresql/postgresql.conf
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  dbt:
+    <<: *dbt-config  # Reuse the shared config
+    depends_on:
+      postgres:
+        condition: service_healthy  # Wait for Postgres healthcheck
+  dbt-docs:
+    <<: *dbt-config  # Reuse the shared config
+    ports:
+      - "8080:8080"
+    command: bash -c "cd /usr/app && dbt docs generate && dbt docs serve --port 8080"
+    depends_on:
+      - dbt  # Wait for dbt service to complete
+    profiles:
+      - docs  # Only include this service if using `--profile docs`
+volumes:
+  postgres_data:

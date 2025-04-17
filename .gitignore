@@ -1,0 +1,6 @@
+.env
+venv
+.env.local
+.env.example
+dbt_project/target/
+dbt_project/logs/dbt.log
