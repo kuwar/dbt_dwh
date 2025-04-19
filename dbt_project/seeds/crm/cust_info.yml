@@ -1,0 +1,25 @@
+---
+version: 2
+
+# Document the seed (raw data)
+seeds:
+  - name: cust_info
+    description: "Raw customer data ingested from CSV seed."
+    columns:
+      - name: cst_id
+        description: "Unique customer identifier (primary key)."
+      - name: cst_key
+        description: "Alternate customer key or hash."
+      - name: cst_firstname
+        description: "Customer's first name (raw, uncleaned)."
+      - name: cst_lastname
+        description: "Customer's last name (raw, uncleaned)."
+      - name: cst_marital_status
+        description: "Marital status (raw values, e.g., 'M', 'S')."
+      - name: cst_gndr
+        description: "Gender abbreviation (raw values, e.g., 'M', 'F')."
+        tests:
+          - accepted_values:
+              values: ['M', 'F', 'NB', null]
+      - name: cst_create_date
+        description: "Customer creation date in raw string format (DD/MM/YYYY)."

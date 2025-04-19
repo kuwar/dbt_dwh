@@ -1,0 +1,7 @@
+---
+version: 2
+
+# Optional: Document the bronze model
+models:
+  - name: cust_info_bronze
+    description: "Bronze layer view of raw customer data, including ingestion metadata."
