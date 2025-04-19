@@ -1,0 +1,8 @@
+[sqlfluff]
+dialect = postgres  # Replace with your database (e.g., snowflake, redshift)
+templater = dbt
+exclude_rules = L031, L032  # Optional: Disable specific rules if needed
+
+[sqlfluff:templater:dbt]
+project_dir = ./  # Path to your dbt project
+profiles_dir = ~/.dbt  # Path to your dbt profiles.yml (adjust if needed)

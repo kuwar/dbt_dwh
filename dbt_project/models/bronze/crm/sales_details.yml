@@ -1,0 +1,9 @@
+---
+version: 2
+
+sources:
+  - name: sales_details
+    schema: public_raw
+    tables:
+      - name: sales_details
+        description: "Sales information"

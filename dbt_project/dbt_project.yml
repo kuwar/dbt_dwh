@@ -49,6 +49,6 @@ seeds:
     +schema: public  # All seeds will go to this schema
     # Custom schemas for specific seed directories
     erp:
-      +schema: public
+      +schema: raw
     crm:
-      +schema: public
+      +schema: raw

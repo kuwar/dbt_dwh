@@ -1,0 +1,5 @@
+# .sqlfluffignore
+target/
+dbt_packages/
+logs/
+macros/example/
