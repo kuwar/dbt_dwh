@@ -1,9 +1,0 @@
----
-version: 2
-
-sources:
-  - name: product_info
-    schema: public_raw
-    tables:
-      - name: prd_info
-        description: "Product information"

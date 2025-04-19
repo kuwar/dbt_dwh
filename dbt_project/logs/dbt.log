@@ -4361,3 +4361,1058 @@ Compilation Error
 [0m23:34:22.073117 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project', 'debug': 'False', 'version_check': 'True', 'log_path': '/Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project/logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
 [0m23:34:22.221958 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7a482fe2-154c-4f65-b6ba-1f6928f7e2a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a2676a0>]}
 [0m23:34:22.245446 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7a482fe2-154c-4f65-b6ba-1f6928f7e2a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a256250>]}
+[0m23:45:53.163615 [error] [MainThread]: Encountered an error:
+
+[0m23:45:53.177627 [error] [MainThread]: Traceback (most recent call last):
+  File "/usr/local/Cellar/dbt-postgres/1.5.10/libexec/lib/python3.9/site-packages/dbt/cli/requires.py", line 86, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/usr/local/Cellar/dbt-postgres/1.5.10/libexec/lib/python3.9/site-packages/dbt/cli/requires.py", line 71, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/Cellar/dbt-postgres/1.5.10/libexec/lib/python3.9/site-packages/dbt/cli/requires.py", line 142, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/Cellar/dbt-postgres/1.5.10/libexec/lib/python3.9/site-packages/dbt/cli/requires.py", line 168, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/Cellar/dbt-postgres/1.5.10/libexec/lib/python3.9/site-packages/dbt/cli/requires.py", line 215, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/Cellar/dbt-postgres/1.5.10/libexec/lib/python3.9/site-packages/dbt/cli/main.py", line 315, in docs_serve
+    results = task.run()
+  File "/usr/local/Cellar/dbt-postgres/1.5.10/libexec/lib/python3.9/site-packages/dbt/task/serve.py", line 28, in run
+    httpd.serve_forever()
+  File "/usr/local/Cellar/python@3.9/3.9.22/Frameworks/Python.framework/Versions/3.9/lib/python3.9/socketserver.py", line 232, in serve_forever
+    ready = selector.select(poll_interval)
+  File "/usr/local/Cellar/python@3.9/3.9.22/Frameworks/Python.framework/Versions/3.9/lib/python3.9/selectors.py", line 416, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt
+
+[0m23:45:53.180718 [debug] [MainThread]: Command `dbt docs serve` failed at 23:45:53.180309 after 691.16 seconds
+[0m23:45:53.182141 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108be3730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a2566a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a256340>]}
+[0m23:45:53.183371 [debug] [MainThread]: Flushing usage events
+[0m23:46:09.887223 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1068bc730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107d0cfd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107d0c0a0>]}
+
+
+============================== 23:46:09.892834 | 5abccbf7-a209-4ca7-9856-7bfaee8d541c ==============================
+[0m23:46:09.892834 [info ] [MainThread]: Running with dbt=1.5.10
+[0m23:46:09.893589 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project/logs', 'version_check': 'True', 'profiles_dir': '/Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m23:46:10.047352 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5abccbf7-a209-4ca7-9856-7bfaee8d541c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106d54100>]}
+[0m23:46:10.070784 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5abccbf7-a209-4ca7-9856-7bfaee8d541c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107f46b20>]}
+[0m23:46:10.073217 [info ] [MainThread]: Registered adapter: postgres=1.5.10
+[0m23:46:10.102327 [debug] [MainThread]: checksum: eeb45c07c464ef86749e5db1bcd84ad6a1c41a8e32fca29eb0dc0e2ac4ef75b7, vars: {}, profile: , target: , version: 1.5.10
+[0m23:46:10.181956 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 4 files changed.
+[0m23:46:10.182680 [debug] [MainThread]: Partial parsing: updated file: crm_erp_dwh://models/bronze/crm/cust_info.yml
+[0m23:46:10.183205 [debug] [MainThread]: Partial parsing: updated file: crm_erp_dwh://models/bronze/crm/prd_info.yml
+[0m23:46:10.183607 [debug] [MainThread]: Partial parsing: updated file: crm_erp_dwh://models/bronze/crm/sales_details.yml
+[0m23:46:10.184005 [debug] [MainThread]: Partial parsing: updated file: crm_erp_dwh://models/bronze/erp/CUST_AZ12.yml
+[0m23:46:10.196080 [error] [MainThread]: Encountered an error:
+Compilation Error
+  dbt found two resources with the name "cust_info".
+  
+  Since these resources have the same name, dbt will be unable to find the correct resource
+  when looking for ref("cust_info").
+  
+  To fix this, change the name of one of these resources:
+  - model.crm_erp_dwh.cust_info (models/bronze/crm/cust_info.sql)
+  - seed.crm_erp_dwh.cust_info (seeds/crm/cust_info.csv)
+[0m23:46:10.197440 [debug] [MainThread]: Command `dbt docs generate` failed at 23:46:10.197295 after 0.35 seconds
+[0m23:46:10.197990 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1068bc730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10813fcd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10813fac0>]}
+[0m23:46:10.198494 [debug] [MainThread]: Flushing usage events
+[0m23:46:59.033908 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a965730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bdb3d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bdb3700>]}
+
+
+============================== 23:46:59.038435 | c2f7acfd-1186-4d9b-ba84-3d9f405844ac ==============================
+[0m23:46:59.038435 [info ] [MainThread]: Running with dbt=1.5.10
+[0m23:46:59.039166 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m23:46:59.176129 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c2f7acfd-1186-4d9b-ba84-3d9f405844ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10adfdbb0>]}
+[0m23:46:59.198861 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c2f7acfd-1186-4d9b-ba84-3d9f405844ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bfdf0d0>]}
+[0m23:46:59.199735 [info ] [MainThread]: Registered adapter: postgres=1.5.10
+[0m23:46:59.226071 [debug] [MainThread]: checksum: eeb45c07c464ef86749e5db1bcd84ad6a1c41a8e32fca29eb0dc0e2ac4ef75b7, vars: {}, profile: , target: , version: 1.5.10
+[0m23:46:59.267333 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:46:59.267836 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:46:59.268705 [error] [MainThread]: Encountered an error:
+Compilation Error
+  dbt found two resources with the name "cust_info".
+  
+  Since these resources have the same name, dbt will be unable to find the correct resource
+  when looking for ref("cust_info").
+  
+  To fix this, change the name of one of these resources:
+  - model.crm_erp_dwh.cust_info (models/bronze/crm/cust_info.sql)
+  - seed.crm_erp_dwh.cust_info (seeds/crm/cust_info.csv)
+[0m23:46:59.269992 [debug] [MainThread]: Command `dbt docs generate` failed at 23:46:59.269824 after 0.27 seconds
+[0m23:46:59.270519 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a965730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c1a3910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c1a38e0>]}
+[0m23:46:59.270997 [debug] [MainThread]: Flushing usage events
+[0m23:47:59.230360 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10daf98e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ef38df0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ef486d0>]}
+
+
+============================== 23:47:59.235011 | 0acdf4fe-965d-46f7-87b8-8003e1a08c49 ==============================
+[0m23:47:59.235011 [info ] [MainThread]: Running with dbt=1.5.10
+[0m23:47:59.235822 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project/logs', 'debug': 'False', 'profiles_dir': '/Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m23:47:59.236375 [info ] [MainThread]: dbt version: 1.5.10
+[0m23:47:59.236997 [info ] [MainThread]: python version: 3.9.22
+[0m23:47:59.237543 [info ] [MainThread]: python path: /usr/local/Cellar/dbt-postgres/1.5.10/libexec/bin/python
+[0m23:47:59.237988 [info ] [MainThread]: os info: macOS-15.4-x86_64-i386-64bit
+[0m23:47:59.238718 [info ] [MainThread]: Using profiles.yml file at /Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project/profiles.yml
+[0m23:47:59.239330 [info ] [MainThread]: Using dbt_project.yml file at /Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project/dbt_project.yml
+[0m23:47:59.239839 [info ] [MainThread]: Configuration:
+[0m23:47:59.312926 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m23:47:59.411351 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m23:47:59.412078 [info ] [MainThread]: Required dependencies:
+[0m23:47:59.412707 [debug] [MainThread]: Executing "git --help"
+[0m23:47:59.437744 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m23:47:59.439711 [debug] [MainThread]: STDERR: "b''"
+[0m23:47:59.440992 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:47:59.441611 [info ] [MainThread]: Connection:
+[0m23:47:59.442493 [info ] [MainThread]:   host: localhost
+[0m23:47:59.443030 [info ] [MainThread]:   port: 5435
+[0m23:47:59.443558 [info ] [MainThread]:   user: crm_erp_usr
+[0m23:47:59.444050 [info ] [MainThread]:   database: crm_erp_dwh
+[0m23:47:59.444500 [info ] [MainThread]:   schema: public
+[0m23:47:59.444938 [info ] [MainThread]:   search_path: None
+[0m23:47:59.445362 [info ] [MainThread]:   keepalives_idle: 0
+[0m23:47:59.445824 [info ] [MainThread]:   sslmode: None
+[0m23:47:59.447044 [info ] [MainThread]: Registered adapter: postgres=1.5.10
+[0m23:47:59.456239 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m23:47:59.457931 [debug] [MainThread]: Using postgres connection "debug"
+[0m23:47:59.458437 [debug] [MainThread]: On debug: select 1 as id
+[0m23:47:59.458842 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:47:59.508826 [debug] [MainThread]: SQL status: SELECT 1 in 0.0 seconds
+[0m23:47:59.510616 [debug] [MainThread]: On debug: Close
+[0m23:47:59.511153 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m23:47:59.512231 [info ] [MainThread]: [32mAll checks passed![0m
+[0m23:47:59.513632 [debug] [MainThread]: Command `dbt debug` succeeded at 23:47:59.513418 after 0.32 seconds
+[0m23:47:59.514195 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m23:47:59.514794 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10daf98e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f17d610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ef76610>]}
+[0m23:47:59.515381 [debug] [MainThread]: Flushing usage events
+[0m23:49:10.133313 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109f07bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b356040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b356af0>]}
+
+
+============================== 23:49:10.140239 | d65802b1-4102-428a-88d6-1cbb7ced8beb ==============================
+[0m23:49:10.140239 [info ] [MainThread]: Running with dbt=1.5.10
+[0m23:49:10.141197 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project', 'debug': 'False', 'warn_error': 'None', 'log_path': '/Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m23:49:10.307508 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd65802b1-4102-428a-88d6-1cbb7ced8beb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b346d90>]}
+[0m23:49:10.329741 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd65802b1-4102-428a-88d6-1cbb7ced8beb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b593df0>]}
+[0m23:49:10.331966 [info ] [MainThread]: Registered adapter: postgres=1.5.10
+[0m23:49:10.362117 [debug] [MainThread]: checksum: eeb45c07c464ef86749e5db1bcd84ad6a1c41a8e32fca29eb0dc0e2ac4ef75b7, vars: {}, profile: , target: , version: 1.5.10
+[0m23:49:10.442214 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:49:10.442766 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:49:10.443614 [error] [MainThread]: Encountered an error:
+Compilation Error
+  dbt found two resources with the name "cust_info".
+  
+  Since these resources have the same name, dbt will be unable to find the correct resource
+  when looking for ref("cust_info").
+  
+  To fix this, change the name of one of these resources:
+  - model.crm_erp_dwh.cust_info (models/bronze/crm/cust_info.sql)
+  - seed.crm_erp_dwh.cust_info (seeds/crm/cust_info.csv)
+[0m23:49:10.444827 [debug] [MainThread]: Command `dbt docs generate` failed at 23:49:10.444658 after 0.35 seconds
+[0m23:49:10.445352 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109f07bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b743940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b743910>]}
+[0m23:49:10.445826 [debug] [MainThread]: Flushing usage events
+[0m23:49:23.453222 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105845730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106c84f40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106c94760>]}
+
+
+============================== 23:49:23.457520 | 39cb2637-ca42-43b4-8e17-60c8e7dd2327 ==============================
+[0m23:49:23.457520 [info ] [MainThread]: Running with dbt=1.5.10
+[0m23:49:23.458475 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project/logs', 'profiles_dir': '/Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m23:49:23.595614 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '39cb2637-ca42-43b4-8e17-60c8e7dd2327', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106eca6a0>]}
+[0m23:49:23.617994 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '39cb2637-ca42-43b4-8e17-60c8e7dd2327', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106eb9250>]}
+[0m23:50:53.280844 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106531dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10799e490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10799ee80>]}
+
+
+============================== 23:50:53.287593 | 49c7b031-d03a-4c03-ac41-1153be09192e ==============================
+[0m23:50:53.287593 [info ] [MainThread]: Running with dbt=1.5.10
+[0m23:50:53.288711 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project/logs', 'profiles_dir': '/Users/sauravkuwar/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m23:50:53.316152 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Could not find profile named 'crm_erp_dwh'
+[0m23:50:53.317305 [debug] [MainThread]: Command `dbt run` failed at 23:50:53.317140 after 0.09 seconds
+[0m23:50:53.317730 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106531dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1042ea400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079ac760>]}
+[0m23:50:53.318141 [debug] [MainThread]: Flushing usage events
+[0m23:51:05.790767 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109315cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10939ca90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10939d250>]}
+
+
+============================== 23:51:05.799774 | d6b1b23f-9650-42e1-ab6b-745d50e17549 ==============================
+[0m23:51:05.799774 [info ] [MainThread]: Running with dbt=1.9.4
+[0m23:51:05.801117 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project/logs', 'profiles_dir': '/Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m23:51:06.053384 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd6b1b23f-9650-42e1-ab6b-745d50e17549', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109740850>]}
+[0m23:51:06.112513 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd6b1b23f-9650-42e1-ab6b-745d50e17549', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106a5df90>]}
+[0m23:51:06.114289 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m23:51:06.261414 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m23:51:06.350218 [info ] [MainThread]: Unable to do partial parsing because of a version mismatch
+[0m23:51:06.350960 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'd6b1b23f-9650-42e1-ab6b-745d50e17549', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10870a190>]}
+[0m23:51:07.620909 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.crm_erp_dwh.gold
+- models.crm_erp_dwh.silver
+- models.crm_erp_dwh.gold.marts
+[0m23:51:07.626443 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd6b1b23f-9650-42e1-ab6b-745d50e17549', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108e5da10>]}
+[0m23:51:07.705095 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project/target/manifest.json
+[0m23:51:07.709458 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project/target/semantic_manifest.json
+[0m23:51:07.737877 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd6b1b23f-9650-42e1-ab6b-745d50e17549', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a17bd10>]}
+[0m23:51:07.738515 [info ] [MainThread]: Found 6 models, 6 seeds, 433 macros
+[0m23:51:07.739014 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd6b1b23f-9650-42e1-ab6b-745d50e17549', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1093bee10>]}
+[0m23:51:07.741283 [info ] [MainThread]: 
+[0m23:51:07.741846 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m23:51:07.742460 [info ] [MainThread]: 
+[0m23:51:07.743197 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m23:51:07.748494 [debug] [ThreadPool]: Acquiring new postgres connection 'list_crm_erp_dwh'
+[0m23:51:07.822468 [debug] [ThreadPool]: Using postgres connection "list_crm_erp_dwh"
+[0m23:51:07.823018 [debug] [ThreadPool]: On list_crm_erp_dwh: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "connection_name": "list_crm_erp_dwh"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m23:51:07.823384 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:51:07.909452 [debug] [ThreadPool]: SQL status: SELECT 7 in 0.086 seconds
+[0m23:51:07.910905 [debug] [ThreadPool]: On list_crm_erp_dwh: Close
+[0m23:51:07.913004 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_crm_erp_dwh, now list_crm_erp_dwh_public_bronze)
+[0m23:51:07.913773 [debug] [ThreadPool]: Acquiring new postgres connection 'list_crm_erp_dwh_public_raw'
+[0m23:51:07.919697 [debug] [ThreadPool]: Using postgres connection "list_crm_erp_dwh_public_bronze"
+[0m23:51:07.922035 [debug] [ThreadPool]: Using postgres connection "list_crm_erp_dwh_public_raw"
+[0m23:51:07.922510 [debug] [ThreadPool]: On list_crm_erp_dwh_public_bronze: BEGIN
+[0m23:51:07.922874 [debug] [ThreadPool]: On list_crm_erp_dwh_public_raw: BEGIN
+[0m23:51:07.923244 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m23:51:07.923624 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:51:07.943414 [debug] [ThreadPool]: SQL status: BEGIN in 0.020 seconds
+[0m23:51:07.943924 [debug] [ThreadPool]: SQL status: BEGIN in 0.020 seconds
+[0m23:51:07.944451 [debug] [ThreadPool]: Using postgres connection "list_crm_erp_dwh_public_bronze"
+[0m23:51:07.944845 [debug] [ThreadPool]: Using postgres connection "list_crm_erp_dwh_public_raw"
+[0m23:51:07.945265 [debug] [ThreadPool]: On list_crm_erp_dwh_public_bronze: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "connection_name": "list_crm_erp_dwh_public_bronze"} */
+select
+      'crm_erp_dwh' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_bronze'
+    union all
+    select
+      'crm_erp_dwh' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_bronze'
+    union all
+    select
+      'crm_erp_dwh' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_bronze'
+  
+[0m23:51:07.945783 [debug] [ThreadPool]: On list_crm_erp_dwh_public_raw: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "connection_name": "list_crm_erp_dwh_public_raw"} */
+select
+      'crm_erp_dwh' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_raw'
+    union all
+    select
+      'crm_erp_dwh' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_raw'
+    union all
+    select
+      'crm_erp_dwh' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_raw'
+  
+[0m23:51:07.953179 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.006 seconds
+[0m23:51:07.953660 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.007 seconds
+[0m23:51:07.955127 [debug] [ThreadPool]: On list_crm_erp_dwh_public_raw: ROLLBACK
+[0m23:51:07.956557 [debug] [ThreadPool]: On list_crm_erp_dwh_public_bronze: ROLLBACK
+[0m23:51:07.958372 [debug] [ThreadPool]: On list_crm_erp_dwh_public_raw: Close
+[0m23:51:07.958794 [debug] [ThreadPool]: On list_crm_erp_dwh_public_bronze: Close
+[0m23:51:07.966150 [debug] [MainThread]: Using postgres connection "master"
+[0m23:51:07.966697 [debug] [MainThread]: On master: BEGIN
+[0m23:51:07.967185 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:51:07.981361 [debug] [MainThread]: SQL status: BEGIN in 0.014 seconds
+[0m23:51:07.981877 [debug] [MainThread]: Using postgres connection "master"
+[0m23:51:07.982330 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m23:51:07.986699 [debug] [MainThread]: SQL status: SELECT 1 in 0.004 seconds
+[0m23:51:07.988023 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd6b1b23f-9650-42e1-ab6b-745d50e17549', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1097e43d0>]}
+[0m23:51:07.988572 [debug] [MainThread]: On master: ROLLBACK
+[0m23:51:07.990038 [debug] [MainThread]: Using postgres connection "master"
+[0m23:51:07.990554 [debug] [MainThread]: On master: BEGIN
+[0m23:51:07.993244 [debug] [MainThread]: SQL status: BEGIN in 0.002 seconds
+[0m23:51:07.993770 [debug] [MainThread]: On master: COMMIT
+[0m23:51:07.994148 [debug] [MainThread]: Using postgres connection "master"
+[0m23:51:07.994483 [debug] [MainThread]: On master: COMMIT
+[0m23:51:07.996046 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m23:51:07.996533 [debug] [MainThread]: On master: Close
+[0m23:51:08.000092 [debug] [Thread-1 (]: Began running node model.crm_erp_dwh.CUST_AZ12
+[0m23:51:08.000613 [debug] [Thread-2 (]: Began running node model.crm_erp_dwh.LOC_A101
+[0m23:51:08.001152 [debug] [Thread-3 (]: Began running node model.crm_erp_dwh.PX_CAT_G1V2
+[0m23:51:08.001765 [debug] [Thread-4 (]: Began running node model.crm_erp_dwh.cust_info
+[0m23:51:08.002658 [info ] [Thread-1 (]: 1 of 6 START sql table model public_bronze.CUST_AZ12 ........................... [RUN]
+[0m23:51:08.003430 [info ] [Thread-2 (]: 2 of 6 START sql table model public_bronze.LOC_A101 ............................ [RUN]
+[0m23:51:08.004135 [info ] [Thread-3 (]: 3 of 6 START sql table model public_bronze.PX_CAT_G1V2 ......................... [RUN]
+[0m23:51:08.004887 [info ] [Thread-4 (]: 4 of 6 START sql table model public_bronze.cust_info ........................... [RUN]
+[0m23:51:08.005669 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_crm_erp_dwh_public_bronze, now model.crm_erp_dwh.CUST_AZ12)
+[0m23:51:08.006378 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_crm_erp_dwh_public_raw, now model.crm_erp_dwh.LOC_A101)
+[0m23:51:08.006966 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.crm_erp_dwh.PX_CAT_G1V2'
+[0m23:51:08.007468 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.crm_erp_dwh.cust_info'
+[0m23:51:08.007914 [debug] [Thread-1 (]: Began compiling node model.crm_erp_dwh.CUST_AZ12
+[0m23:51:08.008421 [debug] [Thread-2 (]: Began compiling node model.crm_erp_dwh.LOC_A101
+[0m23:51:08.008877 [debug] [Thread-3 (]: Began compiling node model.crm_erp_dwh.PX_CAT_G1V2
+[0m23:51:08.009651 [debug] [Thread-4 (]: Began compiling node model.crm_erp_dwh.cust_info
+[0m23:51:08.019874 [debug] [Thread-1 (]: Writing injected SQL for node "model.crm_erp_dwh.CUST_AZ12"
+[0m23:51:08.023119 [debug] [Thread-2 (]: Writing injected SQL for node "model.crm_erp_dwh.LOC_A101"
+[0m23:51:08.026958 [debug] [Thread-3 (]: Writing injected SQL for node "model.crm_erp_dwh.PX_CAT_G1V2"
+[0m23:51:08.029883 [debug] [Thread-4 (]: Writing injected SQL for node "model.crm_erp_dwh.cust_info"
+[0m23:51:08.031892 [debug] [Thread-1 (]: Began executing node model.crm_erp_dwh.CUST_AZ12
+[0m23:51:08.032436 [debug] [Thread-3 (]: Began executing node model.crm_erp_dwh.PX_CAT_G1V2
+[0m23:51:08.032833 [debug] [Thread-2 (]: Began executing node model.crm_erp_dwh.LOC_A101
+[0m23:51:08.052992 [debug] [Thread-4 (]: Began executing node model.crm_erp_dwh.cust_info
+[0m23:51:08.086419 [debug] [Thread-1 (]: Writing runtime sql for node "model.crm_erp_dwh.CUST_AZ12"
+[0m23:51:08.089116 [debug] [Thread-3 (]: Writing runtime sql for node "model.crm_erp_dwh.PX_CAT_G1V2"
+[0m23:51:08.093801 [debug] [Thread-2 (]: Writing runtime sql for node "model.crm_erp_dwh.LOC_A101"
+[0m23:51:08.098108 [debug] [Thread-4 (]: Writing runtime sql for node "model.crm_erp_dwh.cust_info"
+[0m23:51:08.099815 [debug] [Thread-1 (]: Using postgres connection "model.crm_erp_dwh.CUST_AZ12"
+[0m23:51:08.100314 [debug] [Thread-1 (]: On model.crm_erp_dwh.CUST_AZ12: BEGIN
+[0m23:51:08.100819 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:51:08.101844 [debug] [Thread-3 (]: Using postgres connection "model.crm_erp_dwh.PX_CAT_G1V2"
+[0m23:51:08.102548 [debug] [Thread-2 (]: Using postgres connection "model.crm_erp_dwh.LOC_A101"
+[0m23:51:08.103262 [debug] [Thread-3 (]: On model.crm_erp_dwh.PX_CAT_G1V2: BEGIN
+[0m23:51:08.103893 [debug] [Thread-4 (]: Using postgres connection "model.crm_erp_dwh.cust_info"
+[0m23:51:08.104404 [debug] [Thread-2 (]: On model.crm_erp_dwh.LOC_A101: BEGIN
+[0m23:51:08.105032 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m23:51:08.105603 [debug] [Thread-4 (]: On model.crm_erp_dwh.cust_info: BEGIN
+[0m23:51:08.106166 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m23:51:08.107021 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m23:51:08.123196 [debug] [Thread-1 (]: SQL status: BEGIN in 0.022 seconds
+[0m23:51:08.123941 [debug] [Thread-1 (]: Using postgres connection "model.crm_erp_dwh.CUST_AZ12"
+[0m23:51:08.124400 [debug] [Thread-1 (]: On model.crm_erp_dwh.CUST_AZ12: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "node_id": "model.crm_erp_dwh.CUST_AZ12"} */
+
+  
+    
+
+  create  table "crm_erp_dwh"."public_bronze"."CUST_AZ12__dbt_tmp"
+  
+  
+    as
+  
+  (
+    SELECT * 
+FROM "crm_erp_dwh"."public_raw"."CUST_AZ12"
+  );
+  
+[0m23:51:08.131438 [debug] [Thread-3 (]: SQL status: BEGIN in 0.026 seconds
+[0m23:51:08.132099 [debug] [Thread-3 (]: Using postgres connection "model.crm_erp_dwh.PX_CAT_G1V2"
+[0m23:51:08.132749 [debug] [Thread-3 (]: On model.crm_erp_dwh.PX_CAT_G1V2: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "node_id": "model.crm_erp_dwh.PX_CAT_G1V2"} */
+
+  
+    
+
+  create  table "crm_erp_dwh"."public_bronze"."PX_CAT_G1V2__dbt_tmp"
+  
+  
+    as
+  
+  (
+    SELECT * 
+FROM "crm_erp_dwh"."public_raw"."PX_CAT_G1V2"
+  );
+  
+[0m23:51:08.133690 [debug] [Thread-4 (]: SQL status: BEGIN in 0.027 seconds
+[0m23:51:08.134479 [debug] [Thread-4 (]: Using postgres connection "model.crm_erp_dwh.cust_info"
+[0m23:51:08.135075 [debug] [Thread-4 (]: On model.crm_erp_dwh.cust_info: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "node_id": "model.crm_erp_dwh.cust_info"} */
+
+  
+    
+
+  create  table "crm_erp_dwh"."public_bronze"."cust_info__dbt_tmp"
+  
+  
+    as
+  
+  (
+    SELECT * 
+FROM "crm_erp_dwh"."public_raw"."cust_info"
+  );
+  
+[0m23:51:08.135854 [debug] [Thread-2 (]: SQL status: BEGIN in 0.030 seconds
+[0m23:51:08.136421 [debug] [Thread-2 (]: Using postgres connection "model.crm_erp_dwh.LOC_A101"
+[0m23:51:08.136912 [debug] [Thread-2 (]: On model.crm_erp_dwh.LOC_A101: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "node_id": "model.crm_erp_dwh.LOC_A101"} */
+
+  
+    
+
+  create  table "crm_erp_dwh"."public_bronze"."LOC_A101__dbt_tmp"
+  
+  
+    as
+  
+  (
+    SELECT * 
+FROM "crm_erp_dwh"."public_raw"."LOC_A101"
+  );
+  
+[0m23:51:08.138852 [debug] [Thread-3 (]: SQL status: SELECT 37 in 0.005 seconds
+[0m23:51:08.153199 [debug] [Thread-3 (]: Using postgres connection "model.crm_erp_dwh.PX_CAT_G1V2"
+[0m23:51:08.153705 [debug] [Thread-1 (]: SQL status: SELECT 18484 in 0.029 seconds
+[0m23:51:08.154344 [debug] [Thread-3 (]: On model.crm_erp_dwh.PX_CAT_G1V2: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "node_id": "model.crm_erp_dwh.PX_CAT_G1V2"} */
+alter table "crm_erp_dwh"."public_bronze"."PX_CAT_G1V2" rename to "PX_CAT_G1V2__dbt_backup"
+[0m23:51:08.158365 [debug] [Thread-1 (]: Using postgres connection "model.crm_erp_dwh.CUST_AZ12"
+[0m23:51:08.158912 [debug] [Thread-4 (]: SQL status: SELECT 18494 in 0.023 seconds
+[0m23:51:08.159793 [debug] [Thread-2 (]: SQL status: SELECT 18484 in 0.022 seconds
+[0m23:51:08.160282 [debug] [Thread-1 (]: On model.crm_erp_dwh.CUST_AZ12: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "node_id": "model.crm_erp_dwh.CUST_AZ12"} */
+alter table "crm_erp_dwh"."public_bronze"."CUST_AZ12" rename to "CUST_AZ12__dbt_backup"
+[0m23:51:08.164126 [debug] [Thread-4 (]: Using postgres connection "model.crm_erp_dwh.cust_info"
+[0m23:51:08.164633 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.005 seconds
+[0m23:51:08.168352 [debug] [Thread-2 (]: Using postgres connection "model.crm_erp_dwh.LOC_A101"
+[0m23:51:08.168969 [debug] [Thread-4 (]: On model.crm_erp_dwh.cust_info: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "node_id": "model.crm_erp_dwh.cust_info"} */
+alter table "crm_erp_dwh"."public_bronze"."cust_info" rename to "cust_info__dbt_backup"
+[0m23:51:08.172165 [debug] [Thread-3 (]: Using postgres connection "model.crm_erp_dwh.PX_CAT_G1V2"
+[0m23:51:08.172678 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.004 seconds
+[0m23:51:08.173108 [debug] [Thread-2 (]: On model.crm_erp_dwh.LOC_A101: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "node_id": "model.crm_erp_dwh.LOC_A101"} */
+alter table "crm_erp_dwh"."public_bronze"."LOC_A101" rename to "LOC_A101__dbt_backup"
+[0m23:51:08.173602 [debug] [Thread-3 (]: On model.crm_erp_dwh.PX_CAT_G1V2: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "node_id": "model.crm_erp_dwh.PX_CAT_G1V2"} */
+alter table "crm_erp_dwh"."public_bronze"."PX_CAT_G1V2__dbt_tmp" rename to "PX_CAT_G1V2"
+[0m23:51:08.178656 [debug] [Thread-1 (]: Using postgres connection "model.crm_erp_dwh.CUST_AZ12"
+[0m23:51:08.179198 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.006 seconds
+[0m23:51:08.179936 [debug] [Thread-1 (]: On model.crm_erp_dwh.CUST_AZ12: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "node_id": "model.crm_erp_dwh.CUST_AZ12"} */
+alter table "crm_erp_dwh"."public_bronze"."CUST_AZ12__dbt_tmp" rename to "CUST_AZ12"
+[0m23:51:08.183056 [debug] [Thread-4 (]: Using postgres connection "model.crm_erp_dwh.cust_info"
+[0m23:51:08.183512 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.004 seconds
+[0m23:51:08.183954 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.004 seconds
+[0m23:51:08.184486 [debug] [Thread-4 (]: On model.crm_erp_dwh.cust_info: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "node_id": "model.crm_erp_dwh.cust_info"} */
+alter table "crm_erp_dwh"."public_bronze"."cust_info__dbt_tmp" rename to "cust_info"
+[0m23:51:08.187699 [debug] [Thread-2 (]: Using postgres connection "model.crm_erp_dwh.LOC_A101"
+[0m23:51:08.188171 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.004 seconds
+[0m23:51:08.204870 [debug] [Thread-3 (]: On model.crm_erp_dwh.PX_CAT_G1V2: COMMIT
+[0m23:51:08.205664 [debug] [Thread-2 (]: On model.crm_erp_dwh.LOC_A101: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "node_id": "model.crm_erp_dwh.LOC_A101"} */
+alter table "crm_erp_dwh"."public_bronze"."LOC_A101__dbt_tmp" rename to "LOC_A101"
+[0m23:51:08.207900 [debug] [Thread-1 (]: On model.crm_erp_dwh.CUST_AZ12: COMMIT
+[0m23:51:08.208661 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.003 seconds
+[0m23:51:08.209243 [debug] [Thread-3 (]: Using postgres connection "model.crm_erp_dwh.PX_CAT_G1V2"
+[0m23:51:08.210070 [debug] [Thread-1 (]: Using postgres connection "model.crm_erp_dwh.CUST_AZ12"
+[0m23:51:08.212559 [debug] [Thread-4 (]: On model.crm_erp_dwh.cust_info: COMMIT
+[0m23:51:08.213054 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.003 seconds
+[0m23:51:08.213705 [debug] [Thread-3 (]: On model.crm_erp_dwh.PX_CAT_G1V2: COMMIT
+[0m23:51:08.214212 [debug] [Thread-1 (]: On model.crm_erp_dwh.CUST_AZ12: COMMIT
+[0m23:51:08.214637 [debug] [Thread-4 (]: Using postgres connection "model.crm_erp_dwh.cust_info"
+[0m23:51:08.216362 [debug] [Thread-2 (]: On model.crm_erp_dwh.LOC_A101: COMMIT
+[0m23:51:08.216995 [debug] [Thread-4 (]: On model.crm_erp_dwh.cust_info: COMMIT
+[0m23:51:08.217495 [debug] [Thread-2 (]: Using postgres connection "model.crm_erp_dwh.LOC_A101"
+[0m23:51:08.218124 [debug] [Thread-2 (]: On model.crm_erp_dwh.LOC_A101: COMMIT
+[0m23:51:08.224955 [debug] [Thread-1 (]: SQL status: COMMIT in 0.008 seconds
+[0m23:51:08.225794 [debug] [Thread-3 (]: SQL status: COMMIT in 0.009 seconds
+[0m23:51:08.226274 [debug] [Thread-4 (]: SQL status: COMMIT in 0.008 seconds
+[0m23:51:08.226693 [debug] [Thread-2 (]: SQL status: COMMIT in 0.008 seconds
+[0m23:51:08.232969 [debug] [Thread-1 (]: Applying DROP to: "crm_erp_dwh"."public_bronze"."CUST_AZ12__dbt_backup"
+[0m23:51:08.235757 [debug] [Thread-3 (]: Applying DROP to: "crm_erp_dwh"."public_bronze"."PX_CAT_G1V2__dbt_backup"
+[0m23:51:08.238176 [debug] [Thread-4 (]: Applying DROP to: "crm_erp_dwh"."public_bronze"."cust_info__dbt_backup"
+[0m23:51:08.240572 [debug] [Thread-2 (]: Applying DROP to: "crm_erp_dwh"."public_bronze"."LOC_A101__dbt_backup"
+[0m23:51:08.246242 [debug] [Thread-1 (]: Using postgres connection "model.crm_erp_dwh.CUST_AZ12"
+[0m23:51:08.247197 [debug] [Thread-3 (]: Using postgres connection "model.crm_erp_dwh.PX_CAT_G1V2"
+[0m23:51:08.247996 [debug] [Thread-4 (]: Using postgres connection "model.crm_erp_dwh.cust_info"
+[0m23:51:08.248823 [debug] [Thread-2 (]: Using postgres connection "model.crm_erp_dwh.LOC_A101"
+[0m23:51:08.249301 [debug] [Thread-1 (]: On model.crm_erp_dwh.CUST_AZ12: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "node_id": "model.crm_erp_dwh.CUST_AZ12"} */
+drop table if exists "crm_erp_dwh"."public_bronze"."CUST_AZ12__dbt_backup" cascade
+[0m23:51:08.249696 [debug] [Thread-3 (]: On model.crm_erp_dwh.PX_CAT_G1V2: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "node_id": "model.crm_erp_dwh.PX_CAT_G1V2"} */
+drop table if exists "crm_erp_dwh"."public_bronze"."PX_CAT_G1V2__dbt_backup" cascade
+[0m23:51:08.250082 [debug] [Thread-4 (]: On model.crm_erp_dwh.cust_info: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "node_id": "model.crm_erp_dwh.cust_info"} */
+drop table if exists "crm_erp_dwh"."public_bronze"."cust_info__dbt_backup" cascade
+[0m23:51:08.250522 [debug] [Thread-2 (]: On model.crm_erp_dwh.LOC_A101: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "node_id": "model.crm_erp_dwh.LOC_A101"} */
+drop table if exists "crm_erp_dwh"."public_bronze"."LOC_A101__dbt_backup" cascade
+[0m23:51:08.254303 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.003 seconds
+[0m23:51:08.257464 [debug] [Thread-3 (]: On model.crm_erp_dwh.PX_CAT_G1V2: Close
+[0m23:51:08.258097 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.007 seconds
+[0m23:51:08.258523 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.007 seconds
+[0m23:51:08.258937 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.008 seconds
+[0m23:51:08.261185 [debug] [Thread-1 (]: On model.crm_erp_dwh.CUST_AZ12: Close
+[0m23:51:08.263612 [debug] [Thread-4 (]: On model.crm_erp_dwh.cust_info: Close
+[0m23:51:08.265095 [debug] [Thread-2 (]: On model.crm_erp_dwh.LOC_A101: Close
+[0m23:51:08.265578 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd6b1b23f-9650-42e1-ab6b-745d50e17549', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a4cf0d0>]}
+[0m23:51:08.266239 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd6b1b23f-9650-42e1-ab6b-745d50e17549', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a560410>]}
+[0m23:51:08.266990 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd6b1b23f-9650-42e1-ab6b-745d50e17549', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a532e90>]}
+[0m23:51:08.267855 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd6b1b23f-9650-42e1-ab6b-745d50e17549', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108746790>]}
+[0m23:51:08.268634 [info ] [Thread-3 (]: 3 of 6 OK created sql table model public_bronze.PX_CAT_G1V2 .................... [[32mSELECT 37[0m in 0.25s]
+[0m23:51:08.269767 [info ] [Thread-1 (]: 1 of 6 OK created sql table model public_bronze.CUST_AZ12 ...................... [[32mSELECT 18484[0m in 0.26s]
+[0m23:51:08.270937 [info ] [Thread-4 (]: 4 of 6 OK created sql table model public_bronze.cust_info ...................... [[32mSELECT 18494[0m in 0.26s]
+[0m23:51:08.271916 [info ] [Thread-2 (]: 2 of 6 OK created sql table model public_bronze.LOC_A101 ....................... [[32mSELECT 18484[0m in 0.26s]
+[0m23:51:08.272739 [debug] [Thread-3 (]: Finished running node model.crm_erp_dwh.PX_CAT_G1V2
+[0m23:51:08.273344 [debug] [Thread-1 (]: Finished running node model.crm_erp_dwh.CUST_AZ12
+[0m23:51:08.273939 [debug] [Thread-4 (]: Finished running node model.crm_erp_dwh.cust_info
+[0m23:51:08.274511 [debug] [Thread-2 (]: Finished running node model.crm_erp_dwh.LOC_A101
+[0m23:51:08.275189 [debug] [Thread-3 (]: Began running node model.crm_erp_dwh.prd_info
+[0m23:51:08.276176 [debug] [Thread-1 (]: Began running node model.crm_erp_dwh.sales_details
+[0m23:51:08.277224 [info ] [Thread-3 (]: 5 of 6 START sql table model public_bronze.prd_info ............................ [RUN]
+[0m23:51:08.277964 [info ] [Thread-1 (]: 6 of 6 START sql table model public_bronze.sales_details ....................... [RUN]
+[0m23:51:08.278540 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.crm_erp_dwh.PX_CAT_G1V2, now model.crm_erp_dwh.prd_info)
+[0m23:51:08.279035 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.crm_erp_dwh.CUST_AZ12, now model.crm_erp_dwh.sales_details)
+[0m23:51:08.279510 [debug] [Thread-3 (]: Began compiling node model.crm_erp_dwh.prd_info
+[0m23:51:08.280675 [debug] [Thread-1 (]: Began compiling node model.crm_erp_dwh.sales_details
+[0m23:51:08.284440 [debug] [Thread-3 (]: Writing injected SQL for node "model.crm_erp_dwh.prd_info"
+[0m23:51:08.287425 [debug] [Thread-1 (]: Writing injected SQL for node "model.crm_erp_dwh.sales_details"
+[0m23:51:08.288818 [debug] [Thread-3 (]: Began executing node model.crm_erp_dwh.prd_info
+[0m23:51:08.289401 [debug] [Thread-1 (]: Began executing node model.crm_erp_dwh.sales_details
+[0m23:51:08.295165 [debug] [Thread-3 (]: Writing runtime sql for node "model.crm_erp_dwh.prd_info"
+[0m23:51:08.300521 [debug] [Thread-1 (]: Writing runtime sql for node "model.crm_erp_dwh.sales_details"
+[0m23:51:08.301828 [debug] [Thread-3 (]: Using postgres connection "model.crm_erp_dwh.prd_info"
+[0m23:51:08.302457 [debug] [Thread-1 (]: Using postgres connection "model.crm_erp_dwh.sales_details"
+[0m23:51:08.303054 [debug] [Thread-3 (]: On model.crm_erp_dwh.prd_info: BEGIN
+[0m23:51:08.304162 [debug] [Thread-1 (]: On model.crm_erp_dwh.sales_details: BEGIN
+[0m23:51:08.304861 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m23:51:08.305540 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:51:08.327197 [debug] [Thread-3 (]: SQL status: BEGIN in 0.022 seconds
+[0m23:51:08.327847 [debug] [Thread-3 (]: Using postgres connection "model.crm_erp_dwh.prd_info"
+[0m23:51:08.328325 [debug] [Thread-3 (]: On model.crm_erp_dwh.prd_info: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "node_id": "model.crm_erp_dwh.prd_info"} */
+
+  
+    
+
+  create  table "crm_erp_dwh"."public_bronze"."prd_info__dbt_tmp"
+  
+  
+    as
+  
+  (
+    SELECT * 
+FROM "crm_erp_dwh"."public_raw"."prd_info"
+  );
+  
+[0m23:51:08.328822 [debug] [Thread-1 (]: SQL status: BEGIN in 0.023 seconds
+[0m23:51:08.329365 [debug] [Thread-1 (]: Using postgres connection "model.crm_erp_dwh.sales_details"
+[0m23:51:08.329790 [debug] [Thread-1 (]: On model.crm_erp_dwh.sales_details: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "node_id": "model.crm_erp_dwh.sales_details"} */
+
+  
+    
+
+  create  table "crm_erp_dwh"."public_bronze"."sales_details__dbt_tmp"
+  
+  
+    as
+  
+  (
+    SELECT * 
+FROM "crm_erp_dwh"."public_raw"."sales_details"
+  );
+  
+[0m23:51:08.332459 [debug] [Thread-3 (]: SQL status: SELECT 397 in 0.003 seconds
+[0m23:51:08.335953 [debug] [Thread-3 (]: Using postgres connection "model.crm_erp_dwh.prd_info"
+[0m23:51:08.336445 [debug] [Thread-3 (]: On model.crm_erp_dwh.prd_info: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "node_id": "model.crm_erp_dwh.prd_info"} */
+alter table "crm_erp_dwh"."public_bronze"."prd_info" rename to "prd_info__dbt_backup"
+[0m23:51:08.338641 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m23:51:08.341890 [debug] [Thread-3 (]: Using postgres connection "model.crm_erp_dwh.prd_info"
+[0m23:51:08.342589 [debug] [Thread-3 (]: On model.crm_erp_dwh.prd_info: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "node_id": "model.crm_erp_dwh.prd_info"} */
+alter table "crm_erp_dwh"."public_bronze"."prd_info__dbt_tmp" rename to "prd_info"
+[0m23:51:08.344428 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m23:51:08.346175 [debug] [Thread-3 (]: On model.crm_erp_dwh.prd_info: COMMIT
+[0m23:51:08.346638 [debug] [Thread-3 (]: Using postgres connection "model.crm_erp_dwh.prd_info"
+[0m23:51:08.347020 [debug] [Thread-3 (]: On model.crm_erp_dwh.prd_info: COMMIT
+[0m23:51:08.353928 [debug] [Thread-3 (]: SQL status: COMMIT in 0.006 seconds
+[0m23:51:08.356554 [debug] [Thread-3 (]: Applying DROP to: "crm_erp_dwh"."public_bronze"."prd_info__dbt_backup"
+[0m23:51:08.357420 [debug] [Thread-3 (]: Using postgres connection "model.crm_erp_dwh.prd_info"
+[0m23:51:08.358249 [debug] [Thread-3 (]: On model.crm_erp_dwh.prd_info: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "node_id": "model.crm_erp_dwh.prd_info"} */
+drop table if exists "crm_erp_dwh"."public_bronze"."prd_info__dbt_backup" cascade
+[0m23:51:08.364485 [debug] [Thread-1 (]: SQL status: SELECT 60398 in 0.034 seconds
+[0m23:51:08.368333 [debug] [Thread-1 (]: Using postgres connection "model.crm_erp_dwh.sales_details"
+[0m23:51:08.368772 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.010 seconds
+[0m23:51:08.369238 [debug] [Thread-1 (]: On model.crm_erp_dwh.sales_details: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "node_id": "model.crm_erp_dwh.sales_details"} */
+alter table "crm_erp_dwh"."public_bronze"."sales_details" rename to "sales_details__dbt_backup"
+[0m23:51:08.370500 [debug] [Thread-3 (]: On model.crm_erp_dwh.prd_info: Close
+[0m23:51:08.371218 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd6b1b23f-9650-42e1-ab6b-745d50e17549', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a559d10>]}
+[0m23:51:08.371941 [info ] [Thread-3 (]: 5 of 6 OK created sql table model public_bronze.prd_info ....................... [[32mSELECT 397[0m in 0.09s]
+[0m23:51:08.372614 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m23:51:08.373294 [debug] [Thread-3 (]: Finished running node model.crm_erp_dwh.prd_info
+[0m23:51:08.377014 [debug] [Thread-1 (]: Using postgres connection "model.crm_erp_dwh.sales_details"
+[0m23:51:08.377825 [debug] [Thread-1 (]: On model.crm_erp_dwh.sales_details: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "node_id": "model.crm_erp_dwh.sales_details"} */
+alter table "crm_erp_dwh"."public_bronze"."sales_details__dbt_tmp" rename to "sales_details"
+[0m23:51:08.380222 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m23:51:08.382775 [debug] [Thread-1 (]: On model.crm_erp_dwh.sales_details: COMMIT
+[0m23:51:08.383715 [debug] [Thread-1 (]: Using postgres connection "model.crm_erp_dwh.sales_details"
+[0m23:51:08.384833 [debug] [Thread-1 (]: On model.crm_erp_dwh.sales_details: COMMIT
+[0m23:51:08.387805 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m23:51:08.390895 [debug] [Thread-1 (]: Applying DROP to: "crm_erp_dwh"."public_bronze"."sales_details__dbt_backup"
+[0m23:51:08.391855 [debug] [Thread-1 (]: Using postgres connection "model.crm_erp_dwh.sales_details"
+[0m23:51:08.392643 [debug] [Thread-1 (]: On model.crm_erp_dwh.sales_details: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "node_id": "model.crm_erp_dwh.sales_details"} */
+drop table if exists "crm_erp_dwh"."public_bronze"."sales_details__dbt_backup" cascade
+[0m23:51:08.397452 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.004 seconds
+[0m23:51:08.398904 [debug] [Thread-1 (]: On model.crm_erp_dwh.sales_details: Close
+[0m23:51:08.399536 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd6b1b23f-9650-42e1-ab6b-745d50e17549', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a169cd0>]}
+[0m23:51:08.400235 [info ] [Thread-1 (]: 6 of 6 OK created sql table model public_bronze.sales_details .................. [[32mSELECT 60398[0m in 0.12s]
+[0m23:51:08.400927 [debug] [Thread-1 (]: Finished running node model.crm_erp_dwh.sales_details
+[0m23:51:08.402348 [debug] [MainThread]: Using postgres connection "master"
+[0m23:51:08.402965 [debug] [MainThread]: On master: BEGIN
+[0m23:51:08.403359 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:51:08.420005 [debug] [MainThread]: SQL status: BEGIN in 0.017 seconds
+[0m23:51:08.420742 [debug] [MainThread]: On master: COMMIT
+[0m23:51:08.421211 [debug] [MainThread]: Using postgres connection "master"
+[0m23:51:08.421625 [debug] [MainThread]: On master: COMMIT
+[0m23:51:08.423534 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m23:51:08.424055 [debug] [MainThread]: On master: Close
+[0m23:51:08.424587 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:51:08.424957 [debug] [MainThread]: Connection 'model.crm_erp_dwh.sales_details' was properly closed.
+[0m23:51:08.425839 [debug] [MainThread]: Connection 'model.crm_erp_dwh.LOC_A101' was properly closed.
+[0m23:51:08.426845 [debug] [MainThread]: Connection 'model.crm_erp_dwh.prd_info' was properly closed.
+[0m23:51:08.427420 [debug] [MainThread]: Connection 'model.crm_erp_dwh.cust_info' was properly closed.
+[0m23:51:08.427913 [info ] [MainThread]: 
+[0m23:51:08.428569 [info ] [MainThread]: Finished running 6 table models in 0 hours 0 minutes and 0.68 seconds (0.68s).
+[0m23:51:08.429993 [debug] [MainThread]: Command end result
+[0m23:51:08.467996 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project/target/manifest.json
+[0m23:51:08.471195 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project/target/semantic_manifest.json
+[0m23:51:08.484993 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project/target/run_results.json
+[0m23:51:08.486084 [info ] [MainThread]: 
+[0m23:51:08.487406 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:51:08.488288 [info ] [MainThread]: 
+[0m23:51:08.489188 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=0 SKIP=0 TOTAL=6
+[0m23:51:08.495693 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.7897243, "process_in_blocks": "0", "process_kernel_time": 0.628117, "process_mem_max_rss": "124604416", "process_out_blocks": "0", "process_user_time": 3.733434}
+[0m23:51:08.496916 [debug] [MainThread]: Command `dbt run` succeeded at 23:51:08.496601 after 2.79 seconds
+[0m23:51:08.497942 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104e93f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10939d610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108fc7d90>]}
+[0m23:51:08.502124 [debug] [MainThread]: Flushing usage events
+[0m23:51:08.975959 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:51:47.157314 [error] [MainThread]: Encountered an error:
+
+[0m23:51:47.170149 [error] [MainThread]: Traceback (most recent call last):
+  File "/usr/local/Cellar/dbt-postgres/1.5.10/libexec/lib/python3.9/site-packages/dbt/cli/requires.py", line 86, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/usr/local/Cellar/dbt-postgres/1.5.10/libexec/lib/python3.9/site-packages/dbt/cli/requires.py", line 71, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/Cellar/dbt-postgres/1.5.10/libexec/lib/python3.9/site-packages/dbt/cli/requires.py", line 142, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/Cellar/dbt-postgres/1.5.10/libexec/lib/python3.9/site-packages/dbt/cli/requires.py", line 168, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/Cellar/dbt-postgres/1.5.10/libexec/lib/python3.9/site-packages/dbt/cli/requires.py", line 215, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/Cellar/dbt-postgres/1.5.10/libexec/lib/python3.9/site-packages/dbt/cli/main.py", line 315, in docs_serve
+    results = task.run()
+  File "/usr/local/Cellar/dbt-postgres/1.5.10/libexec/lib/python3.9/site-packages/dbt/task/serve.py", line 28, in run
+    httpd.serve_forever()
+  File "/usr/local/Cellar/python@3.9/3.9.22/Frameworks/Python.framework/Versions/3.9/lib/python3.9/socketserver.py", line 232, in serve_forever
+    ready = selector.select(poll_interval)
+  File "/usr/local/Cellar/python@3.9/3.9.22/Frameworks/Python.framework/Versions/3.9/lib/python3.9/selectors.py", line 416, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt
+
+[0m23:51:47.173841 [debug] [MainThread]: Command `dbt docs serve` failed at 23:51:47.173206 after 143.76 seconds
+[0m23:51:47.175479 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105845730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106eb96a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106eb9340>]}
+[0m23:51:47.178749 [debug] [MainThread]: Flushing usage events
+[0m23:51:57.114085 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d9ab150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10da1cd10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10da1d490>]}
+
+
+============================== 23:51:57.118974 | f8e5c046-b6d7-44ac-9896-c14f8ca5261d ==============================
+[0m23:51:57.118974 [info ] [MainThread]: Running with dbt=1.9.4
+[0m23:51:57.120048 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt docs generate', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m23:51:57.297055 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f8e5c046-b6d7-44ac-9896-c14f8ca5261d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dd86710>]}
+[0m23:51:57.354509 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f8e5c046-b6d7-44ac-9896-c14f8ca5261d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b1ae1d0>]}
+[0m23:51:57.355485 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m23:51:57.485801 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m23:51:57.611423 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:51:57.612076 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:51:57.618429 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.crm_erp_dwh.gold
+- models.crm_erp_dwh.silver
+- models.crm_erp_dwh.gold.marts
+[0m23:51:57.655992 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f8e5c046-b6d7-44ac-9896-c14f8ca5261d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e02f610>]}
+[0m23:51:57.673509 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f8e5c046-b6d7-44ac-9896-c14f8ca5261d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e6a39d0>]}
+[0m23:51:57.674354 [info ] [MainThread]: Found 6 models, 6 seeds, 433 macros
+[0m23:51:57.674846 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f8e5c046-b6d7-44ac-9896-c14f8ca5261d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e5c6490>]}
+[0m23:51:57.677398 [info ] [MainThread]: 
+[0m23:51:57.678023 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m23:51:57.678637 [info ] [MainThread]: 
+[0m23:51:57.679932 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m23:51:57.686054 [debug] [ThreadPool]: Acquiring new postgres connection 'list_crm_erp_dwh_public_bronze'
+[0m23:51:57.687063 [debug] [ThreadPool]: Acquiring new postgres connection 'list_crm_erp_dwh_public_raw'
+[0m23:51:57.769862 [debug] [ThreadPool]: Using postgres connection "list_crm_erp_dwh_public_bronze"
+[0m23:51:57.770436 [debug] [ThreadPool]: Using postgres connection "list_crm_erp_dwh_public_raw"
+[0m23:51:57.770848 [debug] [ThreadPool]: On list_crm_erp_dwh_public_bronze: BEGIN
+[0m23:51:57.771209 [debug] [ThreadPool]: On list_crm_erp_dwh_public_raw: BEGIN
+[0m23:51:57.771549 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:51:57.771870 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:51:57.814579 [debug] [ThreadPool]: SQL status: BEGIN in 0.043 seconds
+[0m23:51:57.815044 [debug] [ThreadPool]: SQL status: BEGIN in 0.043 seconds
+[0m23:51:57.815519 [debug] [ThreadPool]: Using postgres connection "list_crm_erp_dwh_public_bronze"
+[0m23:51:57.815905 [debug] [ThreadPool]: Using postgres connection "list_crm_erp_dwh_public_raw"
+[0m23:51:57.816336 [debug] [ThreadPool]: On list_crm_erp_dwh_public_bronze: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "connection_name": "list_crm_erp_dwh_public_bronze"} */
+select
+      'crm_erp_dwh' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_bronze'
+    union all
+    select
+      'crm_erp_dwh' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_bronze'
+    union all
+    select
+      'crm_erp_dwh' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_bronze'
+  
+[0m23:51:57.816807 [debug] [ThreadPool]: On list_crm_erp_dwh_public_raw: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "connection_name": "list_crm_erp_dwh_public_raw"} */
+select
+      'crm_erp_dwh' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_raw'
+    union all
+    select
+      'crm_erp_dwh' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_raw'
+    union all
+    select
+      'crm_erp_dwh' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_raw'
+  
+[0m23:51:57.820694 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.003 seconds
+[0m23:51:57.821145 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.004 seconds
+[0m23:51:57.822714 [debug] [ThreadPool]: On list_crm_erp_dwh_public_bronze: ROLLBACK
+[0m23:51:57.823989 [debug] [ThreadPool]: On list_crm_erp_dwh_public_raw: ROLLBACK
+[0m23:51:57.825318 [debug] [ThreadPool]: On list_crm_erp_dwh_public_raw: Close
+[0m23:51:57.825755 [debug] [ThreadPool]: On list_crm_erp_dwh_public_bronze: Close
+[0m23:51:57.834610 [debug] [MainThread]: Using postgres connection "master"
+[0m23:51:57.835119 [debug] [MainThread]: On master: BEGIN
+[0m23:51:57.835471 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:51:57.853515 [debug] [MainThread]: SQL status: BEGIN in 0.018 seconds
+[0m23:51:57.854046 [debug] [MainThread]: Using postgres connection "master"
+[0m23:51:57.854496 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m23:51:57.859303 [debug] [MainThread]: SQL status: SELECT 1 in 0.004 seconds
+[0m23:51:57.860645 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f8e5c046-b6d7-44ac-9896-c14f8ca5261d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e6a3350>]}
+[0m23:51:57.861301 [debug] [MainThread]: On master: ROLLBACK
+[0m23:51:57.862663 [debug] [MainThread]: On master: Close
+[0m23:51:57.865280 [debug] [Thread-1 (]: Began running node seed.crm_erp_dwh.CUST_AZ12
+[0m23:51:57.866081 [debug] [Thread-2 (]: Began running node seed.crm_erp_dwh.LOC_A101
+[0m23:51:57.867104 [debug] [Thread-3 (]: Began running node seed.crm_erp_dwh.PX_CAT_G1V2
+[0m23:51:57.868184 [debug] [Thread-4 (]: Began running node seed.crm_erp_dwh.cust_info
+[0m23:51:57.868860 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_crm_erp_dwh_public_bronze, now seed.crm_erp_dwh.CUST_AZ12)
+[0m23:51:57.869397 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_crm_erp_dwh_public_raw, now seed.crm_erp_dwh.LOC_A101)
+[0m23:51:57.869939 [debug] [Thread-3 (]: Acquiring new postgres connection 'seed.crm_erp_dwh.PX_CAT_G1V2'
+[0m23:51:57.870478 [debug] [Thread-4 (]: Acquiring new postgres connection 'seed.crm_erp_dwh.cust_info'
+[0m23:51:57.871111 [debug] [Thread-1 (]: Began compiling node seed.crm_erp_dwh.CUST_AZ12
+[0m23:51:57.871522 [debug] [Thread-2 (]: Began compiling node seed.crm_erp_dwh.LOC_A101
+[0m23:51:57.871914 [debug] [Thread-3 (]: Began compiling node seed.crm_erp_dwh.PX_CAT_G1V2
+[0m23:51:57.872318 [debug] [Thread-4 (]: Began compiling node seed.crm_erp_dwh.cust_info
+[0m23:51:57.879404 [debug] [Thread-1 (]: Began executing node seed.crm_erp_dwh.CUST_AZ12
+[0m23:51:57.881580 [debug] [Thread-2 (]: Began executing node seed.crm_erp_dwh.LOC_A101
+[0m23:51:57.883355 [debug] [Thread-3 (]: Began executing node seed.crm_erp_dwh.PX_CAT_G1V2
+[0m23:51:57.885120 [debug] [Thread-4 (]: Began executing node seed.crm_erp_dwh.cust_info
+[0m23:51:57.885922 [debug] [Thread-1 (]: Finished running node seed.crm_erp_dwh.CUST_AZ12
+[0m23:51:57.886620 [debug] [Thread-2 (]: Finished running node seed.crm_erp_dwh.LOC_A101
+[0m23:51:57.887253 [debug] [Thread-3 (]: Finished running node seed.crm_erp_dwh.PX_CAT_G1V2
+[0m23:51:57.887913 [debug] [Thread-4 (]: Finished running node seed.crm_erp_dwh.cust_info
+[0m23:51:57.888458 [debug] [Thread-1 (]: Began running node seed.crm_erp_dwh.prd_info
+[0m23:51:57.889154 [debug] [Thread-2 (]: Began running node seed.crm_erp_dwh.sales_details
+[0m23:51:57.890106 [debug] [Thread-3 (]: Began running node model.crm_erp_dwh.CUST_AZ12
+[0m23:51:57.890708 [debug] [Thread-4 (]: Began running node model.crm_erp_dwh.LOC_A101
+[0m23:51:57.891378 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.crm_erp_dwh.CUST_AZ12, now seed.crm_erp_dwh.prd_info)
+[0m23:51:57.891851 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly seed.crm_erp_dwh.LOC_A101, now seed.crm_erp_dwh.sales_details)
+[0m23:51:57.892262 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly seed.crm_erp_dwh.PX_CAT_G1V2, now model.crm_erp_dwh.CUST_AZ12)
+[0m23:51:57.892669 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly seed.crm_erp_dwh.cust_info, now model.crm_erp_dwh.LOC_A101)
+[0m23:51:57.893214 [debug] [Thread-1 (]: Began compiling node seed.crm_erp_dwh.prd_info
+[0m23:51:57.893693 [debug] [Thread-2 (]: Began compiling node seed.crm_erp_dwh.sales_details
+[0m23:51:57.894054 [debug] [Thread-3 (]: Began compiling node model.crm_erp_dwh.CUST_AZ12
+[0m23:51:57.894474 [debug] [Thread-4 (]: Began compiling node model.crm_erp_dwh.LOC_A101
+[0m23:51:57.896853 [debug] [Thread-1 (]: Began executing node seed.crm_erp_dwh.prd_info
+[0m23:51:57.898647 [debug] [Thread-2 (]: Began executing node seed.crm_erp_dwh.sales_details
+[0m23:51:57.901282 [debug] [Thread-3 (]: Writing injected SQL for node "model.crm_erp_dwh.CUST_AZ12"
+[0m23:51:57.904076 [debug] [Thread-4 (]: Writing injected SQL for node "model.crm_erp_dwh.LOC_A101"
+[0m23:51:57.905102 [debug] [Thread-1 (]: Finished running node seed.crm_erp_dwh.prd_info
+[0m23:51:57.905757 [debug] [Thread-2 (]: Finished running node seed.crm_erp_dwh.sales_details
+[0m23:51:57.906737 [debug] [Thread-1 (]: Began running node model.crm_erp_dwh.PX_CAT_G1V2
+[0m23:51:57.907603 [debug] [Thread-4 (]: Began executing node model.crm_erp_dwh.LOC_A101
+[0m23:51:57.908150 [debug] [Thread-2 (]: Began running node model.crm_erp_dwh.cust_info
+[0m23:51:57.908491 [debug] [Thread-3 (]: Began executing node model.crm_erp_dwh.CUST_AZ12
+[0m23:51:57.909188 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.crm_erp_dwh.prd_info, now model.crm_erp_dwh.PX_CAT_G1V2)
+[0m23:51:57.909951 [debug] [Thread-4 (]: Finished running node model.crm_erp_dwh.LOC_A101
+[0m23:51:57.910409 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly seed.crm_erp_dwh.sales_details, now model.crm_erp_dwh.cust_info)
+[0m23:51:57.911091 [debug] [Thread-3 (]: Finished running node model.crm_erp_dwh.CUST_AZ12
+[0m23:51:57.911468 [debug] [Thread-1 (]: Began compiling node model.crm_erp_dwh.PX_CAT_G1V2
+[0m23:51:57.912008 [debug] [Thread-4 (]: Began running node model.crm_erp_dwh.prd_info
+[0m23:51:57.912658 [debug] [Thread-2 (]: Began compiling node model.crm_erp_dwh.cust_info
+[0m23:51:57.913341 [debug] [Thread-3 (]: Began running node model.crm_erp_dwh.sales_details
+[0m23:51:57.916253 [debug] [Thread-1 (]: Writing injected SQL for node "model.crm_erp_dwh.PX_CAT_G1V2"
+[0m23:51:57.917026 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.crm_erp_dwh.LOC_A101, now model.crm_erp_dwh.prd_info)
+[0m23:51:57.920626 [debug] [Thread-2 (]: Writing injected SQL for node "model.crm_erp_dwh.cust_info"
+[0m23:51:57.921279 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.crm_erp_dwh.CUST_AZ12, now model.crm_erp_dwh.sales_details)
+[0m23:51:57.921894 [debug] [Thread-4 (]: Began compiling node model.crm_erp_dwh.prd_info
+[0m23:51:57.922483 [debug] [Thread-1 (]: Began executing node model.crm_erp_dwh.PX_CAT_G1V2
+[0m23:51:57.922961 [debug] [Thread-3 (]: Began compiling node model.crm_erp_dwh.sales_details
+[0m23:51:57.925697 [debug] [Thread-4 (]: Writing injected SQL for node "model.crm_erp_dwh.prd_info"
+[0m23:51:57.926266 [debug] [Thread-2 (]: Began executing node model.crm_erp_dwh.cust_info
+[0m23:51:57.927152 [debug] [Thread-1 (]: Finished running node model.crm_erp_dwh.PX_CAT_G1V2
+[0m23:51:57.931171 [debug] [Thread-3 (]: Writing injected SQL for node "model.crm_erp_dwh.sales_details"
+[0m23:51:57.932479 [debug] [Thread-2 (]: Finished running node model.crm_erp_dwh.cust_info
+[0m23:51:57.933429 [debug] [Thread-4 (]: Began executing node model.crm_erp_dwh.prd_info
+[0m23:51:57.935701 [debug] [Thread-4 (]: Finished running node model.crm_erp_dwh.prd_info
+[0m23:51:57.936594 [debug] [Thread-3 (]: Began executing node model.crm_erp_dwh.sales_details
+[0m23:51:57.937920 [debug] [Thread-3 (]: Finished running node model.crm_erp_dwh.sales_details
+[0m23:51:57.939123 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:51:57.939600 [debug] [MainThread]: Connection 'model.crm_erp_dwh.PX_CAT_G1V2' was properly closed.
+[0m23:51:57.939980 [debug] [MainThread]: Connection 'model.crm_erp_dwh.cust_info' was properly closed.
+[0m23:51:57.940287 [debug] [MainThread]: Connection 'model.crm_erp_dwh.sales_details' was properly closed.
+[0m23:51:57.940580 [debug] [MainThread]: Connection 'model.crm_erp_dwh.prd_info' was properly closed.
+[0m23:51:57.943102 [debug] [MainThread]: Command end result
+[0m23:51:58.017580 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project/target/manifest.json
+[0m23:51:58.021455 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project/target/semantic_manifest.json
+[0m23:51:58.030977 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project/target/run_results.json
+[0m23:51:58.035259 [debug] [MainThread]: Acquiring new postgres connection 'generate_catalog'
+[0m23:51:58.035697 [info ] [MainThread]: Building catalog
+[0m23:51:58.047303 [debug] [ThreadPool]: Acquiring new postgres connection 'crm_erp_dwh.information_schema'
+[0m23:51:58.055712 [debug] [ThreadPool]: Using postgres connection "crm_erp_dwh.information_schema"
+[0m23:51:58.056229 [debug] [ThreadPool]: On crm_erp_dwh.information_schema: BEGIN
+[0m23:51:58.056612 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:51:58.073760 [debug] [ThreadPool]: SQL status: BEGIN in 0.017 seconds
+[0m23:51:58.074317 [debug] [ThreadPool]: Using postgres connection "crm_erp_dwh.information_schema"
+[0m23:51:58.074842 [debug] [ThreadPool]: On crm_erp_dwh.information_schema: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "connection_name": "crm_erp_dwh.information_schema"} */
+
+    
+    
+
+    select
+        'crm_erp_dwh' as table_database,
+        sch.nspname as table_schema,
+        tbl.relname as table_name,
+        case tbl.relkind
+            when 'v' then 'VIEW'
+            when 'm' then 'MATERIALIZED VIEW'
+            else 'BASE TABLE'
+        end as table_type,
+        tbl_desc.description as table_comment,
+        col.attname as column_name,
+        col.attnum as column_index,
+        pg_catalog.format_type(col.atttypid, col.atttypmod) as column_type,
+        col_desc.description as column_comment,
+        pg_get_userbyid(tbl.relowner) as table_owner
+
+    from pg_catalog.pg_namespace sch
+    join pg_catalog.pg_class tbl on tbl.relnamespace = sch.oid
+    join pg_catalog.pg_attribute col on col.attrelid = tbl.oid
+    left outer join pg_catalog.pg_description tbl_desc on (tbl_desc.objoid = tbl.oid and tbl_desc.objsubid = 0)
+    left outer join pg_catalog.pg_description col_desc on (col_desc.objoid = tbl.oid and col_desc.objsubid = col.attnum)
+    where ((upper(sch.nspname) = upper('public_raw') and
+           upper(tbl.relname) = upper('PX_CAT_G1V2')) or (upper(sch.nspname) = upper('public_raw') and
+           upper(tbl.relname) = upper('CUST_AZ12')) or (upper(sch.nspname) = upper('public_raw') and
+           upper(tbl.relname) = upper('LOC_A101')) or (upper(sch.nspname) = upper('public_raw') and
+           upper(tbl.relname) = upper('cust_info')) or (upper(sch.nspname) = upper('public_bronze') and
+           upper(tbl.relname) = upper('sales_details')) or (upper(sch.nspname) = upper('public_bronze') and
+           upper(tbl.relname) = upper('PX_CAT_G1V2')) or (upper(sch.nspname) = upper('public_raw') and
+           upper(tbl.relname) = upper('sales_details')) or (upper(sch.nspname) = upper('public_bronze') and
+           upper(tbl.relname) = upper('prd_info')) or (upper(sch.nspname) = upper('public_bronze') and
+           upper(tbl.relname) = upper('CUST_AZ12')) or (upper(sch.nspname) = upper('public_bronze') and
+           upper(tbl.relname) = upper('cust_info')) or (upper(sch.nspname) = upper('public_raw') and
+           upper(tbl.relname) = upper('prd_info')) or (upper(sch.nspname) = upper('public_bronze') and
+           upper(tbl.relname) = upper('LOC_A101')))
+      and not pg_is_other_temp_schema(sch.oid) -- not a temporary schema belonging to another session
+      and tbl.relpersistence in ('p', 'u') -- [p]ermanent table or [u]nlogged table. Exclude [t]emporary tables
+      and tbl.relkind in ('r', 'v', 'f', 'p', 'm') -- o[r]dinary table, [v]iew, [f]oreign table, [p]artitioned table, [m]aterialized view. Other values are [i]ndex, [S]equence, [c]omposite type, [t]OAST table
+      and col.attnum > 0 -- negative numbers are used for system columns such as oid
+      and not col.attisdropped -- column as not been dropped
+
+    order by
+        sch.nspname,
+        tbl.relname,
+        col.attnum
+[0m23:51:58.082770 [debug] [ThreadPool]: SQL status: SELECT 64 in 0.007 seconds
+[0m23:51:58.089634 [debug] [ThreadPool]: On crm_erp_dwh.information_schema: ROLLBACK
+[0m23:51:58.091438 [debug] [ThreadPool]: On crm_erp_dwh.information_schema: Close
+[0m23:51:58.105438 [debug] [MainThread]: Wrote artifact CatalogArtifact to /Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project/target/catalog.json
+[0m23:51:58.126547 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project/target/manifest.json
+[0m23:51:58.128413 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project/target/semantic_manifest.json
+[0m23:51:58.128863 [info ] [MainThread]: Catalog written to /Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project/target/catalog.json
+[0m23:51:58.131738 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_success": true, "command_wall_clock_time": 1.0948467, "process_in_blocks": "0", "process_kernel_time": 0.395236, "process_mem_max_rss": "122347520", "process_out_blocks": "0", "process_user_time": 2.266887}
+[0m23:51:58.132349 [debug] [MainThread]: Command `dbt docs generate` succeeded at 23:51:58.132230 after 1.10 seconds
+[0m23:51:58.132772 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m23:51:58.133101 [debug] [MainThread]: Connection 'crm_erp_dwh.information_schema' was properly closed.
+[0m23:51:58.133482 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ea1fe90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1093d6750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cbf7550>]}
+[0m23:51:58.133913 [debug] [MainThread]: Flushing usage events
+[0m23:51:58.487670 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:52:04.353039 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d4168d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d48c190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d48cc50>]}
+
+
+============================== 23:52:04.358332 | 55389944-cf0f-4378-9976-0f0acd84675d ==============================
+[0m23:52:04.358332 [info ] [MainThread]: Running with dbt=1.9.4
+[0m23:52:04.359231 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project', 'debug': 'False', 'warn_error': 'None', 'log_path': '/Users/sauravkuwar/Documents/GIT/dbt_dwh/dbt_project/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt docs serve', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m23:52:04.531270 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '55389944-cf0f-4378-9976-0f0acd84675d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d82c690>]}
+[0m23:52:04.592110 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '55389944-cf0f-4378-9976-0f0acd84675d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ab6c810>]}
+[0m23:52:50.786017 [error] [MainThread]: Encountered an error:
+
+[0m23:52:50.797087 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/sauravkuwar/Documents/GIT/dbt_dwh/venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sauravkuwar/Documents/GIT/dbt_dwh/venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sauravkuwar/Documents/GIT/dbt_dwh/venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 235, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sauravkuwar/Documents/GIT/dbt_dwh/venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 264, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sauravkuwar/Documents/GIT/dbt_dwh/venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 311, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sauravkuwar/Documents/GIT/dbt_dwh/venv/lib/python3.11/site-packages/dbt/cli/main.py", line 301, in docs_serve
+    results = task.run()
+              ^^^^^^^^^^
+  File "/Users/sauravkuwar/Documents/GIT/dbt_dwh/venv/lib/python3.11/site-packages/dbt/task/docs/serve.py", line 29, in run
+    httpd.serve_forever()
+  File "/usr/local/Cellar/python@3.11/3.11.12/Frameworks/Python.framework/Versions/3.11/lib/python3.11/socketserver.py", line 233, in serve_forever
+    ready = selector.select(poll_interval)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.11/3.11.12/Frameworks/Python.framework/Versions/3.11/lib/python3.11/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+[0m23:52:50.803640 [debug] [MainThread]: Resource report: {"command_name": "serve", "command_success": false, "command_wall_clock_time": 46.526566, "process_in_blocks": "0", "process_kernel_time": 0.252603, "process_mem_max_rss": "107167744", "process_out_blocks": "0", "process_user_time": 1.657956}
+[0m23:52:50.805560 [debug] [MainThread]: Command `dbt docs serve` failed at 23:52:50.805265 after 46.53 seconds
+[0m23:52:50.806514 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d48c890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d48c9d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d4127d0>]}
+[0m23:52:50.807304 [debug] [MainThread]: Flushing usage events
+[0m23:52:51.183854 [debug] [MainThread]: An error was encountered while trying to flush usage events

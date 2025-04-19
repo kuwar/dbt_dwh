@@ -1,9 +1,0 @@
----
-version: 2
-
-sources:
-  - name: customer_info
-    schema: public_raw
-    tables:
-      - name: cust_info
-        description: "Customer information"
