@@ -32,6 +32,16 @@ clean-targets:         # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 models:
   crm_erp_dwh:
-    # Config indicated by + and applies to all files under models/example/
-    example:
+    bronze:
+      +materialized: table
+      +schema: bronze
+      
+    silver:
+      +materialized: table
+      +schema: silver
+      
+    gold:
       +materialized: view
+      +schema: gold
+      marts:
+        +materialized: view
