@@ -1,0 +1,9 @@
+---
+version: 2
+
+sources:
+  - name: customer_gender_dateofbirth
+    schema: public_raw
+    tables:
+      - name: CUST_AZ12
+        description: "Customer date of birth and gender information"
