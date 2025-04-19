@@ -35,3 +35,9 @@ For managing user, roles and schema consider the file `config/postgres/dw_schema
 ---
 
 *NOTE:* `bronze` and `silver` layer are materialized to `table` and `gold` is materialized to `view`
+
+# References
+) https://www.youtube.com/watch?v=9GVqKuTVANE
+) https://github.com/DataWithBaraa/sql-data-warehouse-project
+) 
+

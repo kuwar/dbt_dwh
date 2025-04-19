@@ -521,3 +521,710 @@ drop view if exists "crm_erp_dwh"."public"."my_second_dbt_model__dbt_backup" cas
 [0m14:56:47.085321 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1047c2090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104809a50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10043b790>]}
 [0m14:56:47.086207 [debug] [MainThread]: Flushing usage events
 [0m14:56:47.501566 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:37:18.103812 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff65eaa4710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff65eaa4590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff65eaa5610>]}
+
+
+============================== 19:37:18.117245 | 0e584d65-0830-40a7-93d4-69c7391d4712 ==============================
+[0m19:37:18.117245 [info ] [MainThread]: Running with dbt=1.9.4
+[0m19:37:18.119505 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/usr/app/dbt_project/logs', 'profiles_dir': '/usr/app/dbt_project', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m19:37:18.149109 [info ] [MainThread]: dbt version: 1.9.4
+[0m19:37:18.151353 [info ] [MainThread]: python version: 3.11.12
+[0m19:37:18.153054 [info ] [MainThread]: python path: /usr/local/bin/python3.11
+[0m19:37:18.154744 [info ] [MainThread]: os info: Linux-5.10.76-linuxkit-x86_64-with-glibc2.36
+[0m19:37:18.349595 [info ] [MainThread]: Using profiles dir at /usr/app/dbt_project
+[0m19:37:18.352151 [info ] [MainThread]: Using profiles.yml file at /usr/app/dbt_project/profiles.yml
+[0m19:37:18.354559 [info ] [MainThread]: Using dbt_project.yml file at /usr/app/dbt_project/dbt_project.yml
+[0m19:37:18.357809 [info ] [MainThread]: adapter type: postgres
+[0m19:37:18.360337 [info ] [MainThread]: adapter version: 1.9.0
+[0m19:37:18.482580 [info ] [MainThread]: Configuration:
+[0m19:37:18.485511 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m19:37:18.488186 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m19:37:18.490976 [info ] [MainThread]: Required dependencies:
+[0m19:37:18.493811 [debug] [MainThread]: Executing "git --help"
+[0m19:37:18.517471 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m19:37:18.519552 [debug] [MainThread]: STDERR: "b''"
+[0m19:37:18.521206 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m19:37:18.522789 [info ] [MainThread]: Connection:
+[0m19:37:18.524660 [info ] [MainThread]:   host: postgres
+[0m19:37:18.526913 [info ] [MainThread]:   port: 5432
+[0m19:37:18.529241 [info ] [MainThread]:   user: crm_erp_usr
+[0m19:37:18.531737 [info ] [MainThread]:   database: crm_erp_dwh
+[0m19:37:18.534584 [info ] [MainThread]:   schema: public
+[0m19:37:18.537566 [info ] [MainThread]:   connect_timeout: 10
+[0m19:37:18.539451 [info ] [MainThread]:   role: None
+[0m19:37:18.541564 [info ] [MainThread]:   search_path: None
+[0m19:37:18.544243 [info ] [MainThread]:   keepalives_idle: 0
+[0m19:37:18.546331 [info ] [MainThread]:   sslmode: None
+[0m19:37:18.549324 [info ] [MainThread]:   sslcert: None
+[0m19:37:18.551644 [info ] [MainThread]:   sslkey: None
+[0m19:37:18.554910 [info ] [MainThread]:   sslrootcert: None
+[0m19:37:18.557214 [info ] [MainThread]:   application_name: dbt
+[0m19:37:18.559948 [info ] [MainThread]:   retries: 1
+[0m19:37:18.561776 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m19:37:18.641889 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m19:37:18.703863 [debug] [MainThread]: Using postgres connection "debug"
+[0m19:37:18.706527 [debug] [MainThread]: On debug: select 1 as id
+[0m19:37:18.708633 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:37:18.740303 [debug] [MainThread]: SQL status: SELECT 1 in 0.032 seconds
+[0m19:37:18.743193 [debug] [MainThread]: On debug: Close
+[0m19:37:18.748147 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m19:37:18.750800 [info ] [MainThread]: [32mAll checks passed![0m
+[0m19:37:18.755935 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 0.7360751, "process_in_blocks": "117008", "process_kernel_time": 0.373329, "process_mem_max_rss": "110036", "process_out_blocks": "1688", "process_user_time": 2.008218}
+[0m19:37:18.759032 [debug] [MainThread]: Command `dbt debug` succeeded at 19:37:18.758695 after 0.74 seconds
+[0m19:37:18.760949 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m19:37:18.762839 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff65f763790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff662dd43d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff662dd5410>]}
+[0m19:37:18.766213 [debug] [MainThread]: Flushing usage events
+[0m19:37:19.158853 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:37:31.772048 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f867ac7e0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f867ad1ddd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f867ac77b10>]}
+
+
+============================== 19:37:31.775639 | 4b514df6-1934-467d-a32e-4e4d33b03b83 ==============================
+[0m19:37:31.775639 [info ] [MainThread]: Running with dbt=1.9.4
+[0m19:37:31.778226 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/usr/app/dbt_project', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/usr/app/dbt_project/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt seed', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m19:37:31.971617 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4b514df6-1934-467d-a32e-4e4d33b03b83', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f867a722c90>]}
+[0m19:37:32.041092 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4b514df6-1934-467d-a32e-4e4d33b03b83', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f867d64e050>]}
+[0m19:37:32.043847 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m19:37:32.123171 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m19:37:32.219763 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m19:37:32.222636 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '4b514df6-1934-467d-a32e-4e4d33b03b83', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f867b9ffdd0>]}
+[0m19:37:33.331061 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 4 unused configuration paths:
+- models.crm_erp_dwh.gold
+- models.crm_erp_dwh.gold.marts
+- models.crm_erp_dwh.bronze
+- models.crm_erp_dwh.silver
+[0m19:37:33.337731 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4b514df6-1934-467d-a32e-4e4d33b03b83', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f867a3847d0>]}
+[0m19:37:33.456265 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/dbt_project/target/manifest.json
+[0m19:37:33.464002 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/dbt_project/target/semantic_manifest.json
+[0m19:37:33.493689 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4b514df6-1934-467d-a32e-4e4d33b03b83', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f867a38c390>]}
+[0m19:37:33.496142 [info ] [MainThread]: Found 6 seeds, 433 macros
+[0m19:37:33.498259 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4b514df6-1934-467d-a32e-4e4d33b03b83', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f867b313490>]}
+[0m19:37:33.501559 [info ] [MainThread]: 
+[0m19:37:33.504353 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m19:37:33.507352 [info ] [MainThread]: 
+[0m19:37:33.510029 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m19:37:33.517678 [debug] [ThreadPool]: Acquiring new postgres connection 'list_crm_erp_dwh'
+[0m19:37:33.556356 [debug] [ThreadPool]: Using postgres connection "list_crm_erp_dwh"
+[0m19:37:33.558763 [debug] [ThreadPool]: On list_crm_erp_dwh: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "connection_name": "list_crm_erp_dwh"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m19:37:33.560407 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:37:33.586036 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.026 seconds
+[0m19:37:33.588868 [debug] [ThreadPool]: On list_crm_erp_dwh: Close
+[0m19:37:33.592311 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_crm_erp_dwh, now create_crm_erp_dwh_public_public)
+[0m19:37:33.594237 [debug] [ThreadPool]: Creating schema "database: "crm_erp_dwh"
+schema: "public_public"
+"
+[0m19:37:33.600341 [debug] [ThreadPool]: Using postgres connection "create_crm_erp_dwh_public_public"
+[0m19:37:33.602117 [debug] [ThreadPool]: On create_crm_erp_dwh_public_public: BEGIN
+[0m19:37:33.603484 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:37:33.612617 [debug] [ThreadPool]: SQL status: BEGIN in 0.009 seconds
+[0m19:37:33.614225 [debug] [ThreadPool]: Using postgres connection "create_crm_erp_dwh_public_public"
+[0m19:37:33.615473 [debug] [ThreadPool]: On create_crm_erp_dwh_public_public: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "connection_name": "create_crm_erp_dwh_public_public"} */
+create schema if not exists "public_public"
+[0m19:37:33.620702 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.004 seconds
+[0m19:37:33.624070 [debug] [ThreadPool]: On create_crm_erp_dwh_public_public: COMMIT
+[0m19:37:33.626251 [debug] [ThreadPool]: Using postgres connection "create_crm_erp_dwh_public_public"
+[0m19:37:33.627674 [debug] [ThreadPool]: On create_crm_erp_dwh_public_public: COMMIT
+[0m19:37:33.630214 [debug] [ThreadPool]: SQL status: COMMIT in 0.001 seconds
+[0m19:37:33.631740 [debug] [ThreadPool]: On create_crm_erp_dwh_public_public: Close
+[0m19:37:33.635399 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_crm_erp_dwh_public_public, now list_crm_erp_dwh_public_public)
+[0m19:37:33.642963 [debug] [ThreadPool]: Using postgres connection "list_crm_erp_dwh_public_public"
+[0m19:37:33.644891 [debug] [ThreadPool]: On list_crm_erp_dwh_public_public: BEGIN
+[0m19:37:33.646482 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:37:33.656306 [debug] [ThreadPool]: SQL status: BEGIN in 0.010 seconds
+[0m19:37:33.658091 [debug] [ThreadPool]: Using postgres connection "list_crm_erp_dwh_public_public"
+[0m19:37:33.659816 [debug] [ThreadPool]: On list_crm_erp_dwh_public_public: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "connection_name": "list_crm_erp_dwh_public_public"} */
+select
+      'crm_erp_dwh' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_public'
+    union all
+    select
+      'crm_erp_dwh' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_public'
+    union all
+    select
+      'crm_erp_dwh' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_public'
+  
+[0m19:37:33.677865 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.016 seconds
+[0m19:37:33.680622 [debug] [ThreadPool]: On list_crm_erp_dwh_public_public: ROLLBACK
+[0m19:37:33.683588 [debug] [ThreadPool]: On list_crm_erp_dwh_public_public: Close
+[0m19:37:33.690503 [debug] [MainThread]: Using postgres connection "master"
+[0m19:37:33.692293 [debug] [MainThread]: On master: BEGIN
+[0m19:37:33.694321 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:37:33.705523 [debug] [MainThread]: SQL status: BEGIN in 0.011 seconds
+[0m19:37:33.707578 [debug] [MainThread]: Using postgres connection "master"
+[0m19:37:33.709782 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m19:37:33.723114 [debug] [MainThread]: SQL status: SELECT 1 in 0.011 seconds
+[0m19:37:33.725996 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4b514df6-1934-467d-a32e-4e4d33b03b83', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8679beba90>]}
+[0m19:37:33.727721 [debug] [MainThread]: On master: ROLLBACK
+[0m19:37:33.730078 [debug] [MainThread]: Using postgres connection "master"
+[0m19:37:33.731708 [debug] [MainThread]: On master: BEGIN
+[0m19:37:33.733961 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m19:37:33.735984 [debug] [MainThread]: On master: COMMIT
+[0m19:37:33.737751 [debug] [MainThread]: Using postgres connection "master"
+[0m19:37:33.739524 [debug] [MainThread]: On master: COMMIT
+[0m19:37:33.741551 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m19:37:33.743101 [debug] [MainThread]: On master: Close
+[0m19:37:33.752138 [debug] [Thread-1 (]: Began running node seed.crm_erp_dwh.CUST_AZ12
+[0m19:37:33.752830 [debug] [Thread-2 (]: Began running node seed.crm_erp_dwh.LOC_A101
+[0m19:37:33.753515 [debug] [Thread-3 (]: Began running node seed.crm_erp_dwh.PX_CAT_G1V2
+[0m19:37:33.754040 [debug] [Thread-4 (]: Began running node seed.crm_erp_dwh.cust_info
+[0m19:37:33.755235 [info ] [Thread-1 (]: 1 of 6 START seed file public_public.CUST_AZ12 ................................. [RUN]
+[0m19:37:33.757311 [info ] [Thread-2 (]: 2 of 6 START seed file public_public.LOC_A101 .................................. [RUN]
+[0m19:37:33.759534 [info ] [Thread-3 (]: 3 of 6 START seed file public_public.PX_CAT_G1V2 ............................... [RUN]
+[0m19:37:33.762458 [info ] [Thread-4 (]: 4 of 6 START seed file public_public.cust_info ................................. [RUN]
+[0m19:37:33.764900 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_crm_erp_dwh_public_public, now seed.crm_erp_dwh.CUST_AZ12)
+[0m19:37:33.766755 [debug] [Thread-2 (]: Acquiring new postgres connection 'seed.crm_erp_dwh.LOC_A101'
+[0m19:37:33.768784 [debug] [Thread-3 (]: Acquiring new postgres connection 'seed.crm_erp_dwh.PX_CAT_G1V2'
+[0m19:37:33.771288 [debug] [Thread-4 (]: Acquiring new postgres connection 'seed.crm_erp_dwh.cust_info'
+[0m19:37:33.772755 [debug] [Thread-1 (]: Began compiling node seed.crm_erp_dwh.CUST_AZ12
+[0m19:37:33.774721 [debug] [Thread-2 (]: Began compiling node seed.crm_erp_dwh.LOC_A101
+[0m19:37:33.777241 [debug] [Thread-3 (]: Began compiling node seed.crm_erp_dwh.PX_CAT_G1V2
+[0m19:37:33.779395 [debug] [Thread-4 (]: Began compiling node seed.crm_erp_dwh.cust_info
+[0m19:37:33.781505 [debug] [Thread-1 (]: Began executing node seed.crm_erp_dwh.CUST_AZ12
+[0m19:37:33.784239 [debug] [Thread-2 (]: Began executing node seed.crm_erp_dwh.LOC_A101
+[0m19:37:33.785709 [debug] [Thread-3 (]: Began executing node seed.crm_erp_dwh.PX_CAT_G1V2
+[0m19:37:33.787755 [debug] [Thread-4 (]: Began executing node seed.crm_erp_dwh.cust_info
+[0m19:37:33.952321 [debug] [Thread-3 (]: Using postgres connection "seed.crm_erp_dwh.PX_CAT_G1V2"
+[0m19:37:33.979755 [debug] [Thread-2 (]: Using postgres connection "seed.crm_erp_dwh.LOC_A101"
+[0m19:37:34.021871 [debug] [Thread-3 (]: On seed.crm_erp_dwh.PX_CAT_G1V2: BEGIN
+[0m19:37:34.024984 [debug] [Thread-2 (]: On seed.crm_erp_dwh.LOC_A101: BEGIN
+[0m19:37:34.026939 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m19:37:34.029253 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m19:37:34.217268 [debug] [Thread-3 (]: SQL status: BEGIN in 0.190 seconds
+[0m19:37:34.244496 [debug] [Thread-2 (]: SQL status: BEGIN in 0.215 seconds
+[0m19:37:34.267083 [debug] [Thread-3 (]: Using postgres connection "seed.crm_erp_dwh.PX_CAT_G1V2"
+[0m19:37:34.300298 [debug] [Thread-2 (]: Using postgres connection "seed.crm_erp_dwh.LOC_A101"
+[0m19:37:34.403457 [debug] [Thread-2 (]: On seed.crm_erp_dwh.LOC_A101: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "node_id": "seed.crm_erp_dwh.LOC_A101"} */
+
+    create table "crm_erp_dwh"."public_public"."LOC_A101" ("CID" text,"CNTRY" text)
+  
+[0m19:37:34.333126 [debug] [Thread-3 (]: On seed.crm_erp_dwh.PX_CAT_G1V2: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "node_id": "seed.crm_erp_dwh.PX_CAT_G1V2"} */
+
+    create table "crm_erp_dwh"."public_public"."PX_CAT_G1V2" ("ID" text,"CAT" text,"SUBCAT" text,"MAINTENANCE" text)
+  
+[0m19:37:34.309249 [debug] [Thread-4 (]: Using postgres connection "seed.crm_erp_dwh.cust_info"
+[0m19:37:34.426674 [debug] [Thread-2 (]: SQL status: CREATE TABLE in 0.011 seconds
+[0m19:37:34.453123 [debug] [Thread-3 (]: SQL status: CREATE TABLE in 0.009 seconds
+[0m19:37:34.463957 [debug] [Thread-4 (]: On seed.crm_erp_dwh.cust_info: BEGIN
+[0m19:37:34.528610 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m19:37:34.466505 [debug] [Thread-1 (]: Using postgres connection "seed.crm_erp_dwh.CUST_AZ12"
+[0m19:37:34.542323 [debug] [Thread-3 (]: Using postgres connection "seed.crm_erp_dwh.PX_CAT_G1V2"
+[0m19:37:34.565468 [debug] [Thread-4 (]: SQL status: BEGIN in 0.037 seconds
+[0m19:37:34.572224 [debug] [Thread-1 (]: On seed.crm_erp_dwh.CUST_AZ12: BEGIN
+[0m19:37:34.595027 [debug] [Thread-3 (]: On seed.crm_erp_dwh.PX_CAT_G1V2: 
+          insert into "crm_erp_dwh"."public_public"."PX_CAT_G1V2" ("ID", "CAT", "SUBCAT", "MAINTENANCE") values
+          (%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%...
+[0m19:37:34.612952 [debug] [Thread-4 (]: Using postgres connection "seed.crm_erp_dwh.cust_info"
+[0m19:37:34.635315 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:37:34.664159 [debug] [Thread-3 (]: SQL status: INSERT 0 37 in 0.007 seconds
+[0m19:37:34.670892 [debug] [Thread-4 (]: On seed.crm_erp_dwh.cust_info: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "node_id": "seed.crm_erp_dwh.cust_info"} */
+
+    create table "crm_erp_dwh"."public_public"."cust_info" ("cst_id" integer,"cst_key" text,"cst_firstname" text,"cst_lastname" text,"cst_marital_status" text,"cst_gndr" text,"cst_create_date" text)
+  
+[0m19:37:34.717348 [debug] [Thread-1 (]: SQL status: BEGIN in 0.082 seconds
+[0m19:37:34.747240 [debug] [Thread-3 (]: Writing runtime SQL for node "seed.crm_erp_dwh.PX_CAT_G1V2"
+[0m19:37:34.785036 [debug] [Thread-4 (]: SQL status: CREATE TABLE in 0.012 seconds
+[0m19:37:34.791740 [debug] [Thread-1 (]: Using postgres connection "seed.crm_erp_dwh.CUST_AZ12"
+[0m19:37:34.878146 [debug] [Thread-1 (]: On seed.crm_erp_dwh.CUST_AZ12: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "node_id": "seed.crm_erp_dwh.CUST_AZ12"} */
+
+    create table "crm_erp_dwh"."public_public"."CUST_AZ12" ("CID" text,"BDATE" date,"GEN" text)
+  
+[0m19:37:34.922515 [debug] [Thread-1 (]: SQL status: CREATE TABLE in 0.022 seconds
+[0m19:37:35.036530 [debug] [Thread-3 (]: On seed.crm_erp_dwh.PX_CAT_G1V2: COMMIT
+[0m19:37:35.109927 [debug] [Thread-3 (]: Using postgres connection "seed.crm_erp_dwh.PX_CAT_G1V2"
+[0m19:37:35.132987 [debug] [Thread-3 (]: On seed.crm_erp_dwh.PX_CAT_G1V2: COMMIT
+[0m19:37:35.182365 [debug] [Thread-3 (]: SQL status: COMMIT in 0.016 seconds
+[0m19:37:35.245307 [debug] [Thread-3 (]: On seed.crm_erp_dwh.PX_CAT_G1V2: Close
+[0m19:37:35.400582 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4b514df6-1934-467d-a32e-4e4d33b03b83', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8679fc18d0>]}
+[0m19:37:35.471856 [info ] [Thread-3 (]: 3 of 6 OK loaded seed file public_public.PX_CAT_G1V2 ........................... [[32mINSERT 37[0m in 1.61s]
+[0m19:37:35.590511 [debug] [Thread-3 (]: Finished running node seed.crm_erp_dwh.PX_CAT_G1V2
+[0m19:37:35.624348 [debug] [Thread-3 (]: Began running node seed.crm_erp_dwh.prd_info
+[0m19:37:35.674958 [info ] [Thread-3 (]: 5 of 6 START seed file public_public.prd_info .................................. [RUN]
+[0m19:37:35.763143 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly seed.crm_erp_dwh.PX_CAT_G1V2, now seed.crm_erp_dwh.prd_info)
+[0m19:37:35.791741 [debug] [Thread-3 (]: Began compiling node seed.crm_erp_dwh.prd_info
+[0m19:37:35.830808 [debug] [Thread-3 (]: Began executing node seed.crm_erp_dwh.prd_info
+[0m19:37:35.917964 [debug] [Thread-3 (]: Using postgres connection "seed.crm_erp_dwh.prd_info"
+[0m19:37:35.957069 [debug] [Thread-3 (]: On seed.crm_erp_dwh.prd_info: BEGIN
+[0m19:37:35.995345 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m19:37:36.241438 [debug] [Thread-3 (]: SQL status: BEGIN in 0.246 seconds
+[0m19:37:36.363008 [debug] [Thread-3 (]: Using postgres connection "seed.crm_erp_dwh.prd_info"
+[0m19:37:36.443860 [debug] [Thread-3 (]: On seed.crm_erp_dwh.prd_info: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "node_id": "seed.crm_erp_dwh.prd_info"} */
+
+    create table "crm_erp_dwh"."public_public"."prd_info" ("prd_id" integer,"prd_key" text,"prd_nm" text,"prd_cost" integer,"prd_line" text,"prd_start_dt" text,"prd_end_dt" text)
+  
+[0m19:37:36.561484 [debug] [Thread-3 (]: SQL status: CREATE TABLE in 0.105 seconds
+[0m19:37:37.505155 [debug] [Thread-3 (]: Using postgres connection "seed.crm_erp_dwh.prd_info"
+[0m19:37:37.615074 [debug] [Thread-3 (]: On seed.crm_erp_dwh.prd_info: 
+          insert into "crm_erp_dwh"."public_public"."prd_info" ("prd_id", "prd_key", "prd_nm", "prd_cost", "prd_line", "prd_start_dt", "prd_end_dt") values
+          (%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),...
+[0m19:37:37.785655 [debug] [Thread-3 (]: SQL status: INSERT 0 397 in 0.082 seconds
+[0m19:37:37.847049 [debug] [Thread-3 (]: Writing runtime SQL for node "seed.crm_erp_dwh.prd_info"
+[0m19:37:38.038905 [debug] [Thread-3 (]: On seed.crm_erp_dwh.prd_info: COMMIT
+[0m19:37:38.166547 [debug] [Thread-3 (]: Using postgres connection "seed.crm_erp_dwh.prd_info"
+[0m19:37:38.315244 [debug] [Thread-3 (]: On seed.crm_erp_dwh.prd_info: COMMIT
+[0m19:37:38.427462 [debug] [Thread-3 (]: SQL status: COMMIT in 0.017 seconds
+[0m19:37:38.451085 [debug] [Thread-3 (]: On seed.crm_erp_dwh.prd_info: Close
+[0m19:37:38.650347 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4b514df6-1934-467d-a32e-4e4d33b03b83', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f867474ef50>]}
+[0m19:37:38.700366 [info ] [Thread-3 (]: 5 of 6 OK loaded seed file public_public.prd_info .............................. [[32mINSERT 397[0m in 2.89s]
+[0m19:37:38.729391 [debug] [Thread-3 (]: Finished running node seed.crm_erp_dwh.prd_info
+[0m19:37:38.988313 [debug] [Thread-3 (]: Began running node seed.crm_erp_dwh.sales_details
+[0m19:37:39.016049 [info ] [Thread-3 (]: 6 of 6 START seed file public_public.sales_details ............................. [RUN]
+[0m19:37:39.181194 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly seed.crm_erp_dwh.prd_info, now seed.crm_erp_dwh.sales_details)
+[0m19:37:39.280692 [debug] [Thread-3 (]: Began compiling node seed.crm_erp_dwh.sales_details
+[0m19:37:39.299470 [debug] [Thread-3 (]: Began executing node seed.crm_erp_dwh.sales_details
+[0m19:37:42.302033 [debug] [Thread-2 (]: Using postgres connection "seed.crm_erp_dwh.LOC_A101"
+[0m19:37:42.325195 [debug] [Thread-2 (]: On seed.crm_erp_dwh.LOC_A101: 
+          insert into "crm_erp_dwh"."public_public"."LOC_A101" ("CID", "CNTRY") values
+          (%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s...
+[0m19:37:42.517612 [debug] [Thread-2 (]: SQL status: INSERT 0 10000 in 0.059 seconds
+[0m19:37:46.771992 [debug] [Thread-1 (]: Using postgres connection "seed.crm_erp_dwh.CUST_AZ12"
+[0m19:37:46.805559 [debug] [Thread-1 (]: On seed.crm_erp_dwh.CUST_AZ12: 
+          insert into "crm_erp_dwh"."public_public"."CUST_AZ12" ("CID", "BDATE", "GEN") values
+          (%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s)...
+[0m19:37:47.093354 [debug] [Thread-1 (]: SQL status: INSERT 0 10000 in 0.122 seconds
+[0m19:37:49.420248 [debug] [Thread-3 (]: Using postgres connection "seed.crm_erp_dwh.sales_details"
+[0m19:37:49.459359 [debug] [Thread-3 (]: On seed.crm_erp_dwh.sales_details: BEGIN
+[0m19:37:49.545497 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m19:37:49.801954 [debug] [Thread-3 (]: SQL status: BEGIN in 0.256 seconds
+[0m19:37:49.895413 [debug] [Thread-3 (]: Using postgres connection "seed.crm_erp_dwh.sales_details"
+[0m19:37:50.010584 [debug] [Thread-3 (]: On seed.crm_erp_dwh.sales_details: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "node_id": "seed.crm_erp_dwh.sales_details"} */
+
+    create table "crm_erp_dwh"."public_public"."sales_details" ("sls_ord_num" text,"sls_prd_key" text,"sls_cust_id" integer,"sls_order_dt" integer,"sls_ship_dt" integer,"sls_due_dt" integer,"sls_sales" integer,"sls_quantity" integer,"sls_price" integer)
+  
+[0m19:37:50.062706 [debug] [Thread-3 (]: SQL status: CREATE TABLE in 0.005 seconds
+[0m19:37:51.151655 [debug] [Thread-2 (]: Using postgres connection "seed.crm_erp_dwh.LOC_A101"
+[0m19:37:51.241727 [debug] [Thread-2 (]: On seed.crm_erp_dwh.LOC_A101: 
+          insert into "crm_erp_dwh"."public_public"."LOC_A101" ("CID", "CNTRY") values
+          (%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s...
+[0m19:37:51.434964 [debug] [Thread-2 (]: SQL status: INSERT 0 8484 in 0.093 seconds
+[0m19:37:51.528637 [debug] [Thread-2 (]: Writing runtime SQL for node "seed.crm_erp_dwh.LOC_A101"
+[0m19:37:51.714516 [debug] [Thread-2 (]: On seed.crm_erp_dwh.LOC_A101: COMMIT
+[0m19:37:51.815396 [debug] [Thread-2 (]: Using postgres connection "seed.crm_erp_dwh.LOC_A101"
+[0m19:37:51.998325 [debug] [Thread-2 (]: On seed.crm_erp_dwh.LOC_A101: COMMIT
+[0m19:37:52.181370 [debug] [Thread-2 (]: SQL status: COMMIT in 0.122 seconds
+[0m19:37:52.214879 [debug] [Thread-2 (]: On seed.crm_erp_dwh.LOC_A101: Close
+[0m19:37:52.336407 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4b514df6-1934-467d-a32e-4e4d33b03b83', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f86743aeb10>]}
+[0m19:37:52.364604 [info ] [Thread-2 (]: 2 of 6 OK loaded seed file public_public.LOC_A101 .............................. [[32mINSERT 18484[0m in 18.57s]
+[0m19:37:52.382605 [debug] [Thread-2 (]: Finished running node seed.crm_erp_dwh.LOC_A101
+[0m19:37:55.834875 [debug] [Thread-1 (]: Using postgres connection "seed.crm_erp_dwh.CUST_AZ12"
+[0m19:37:55.917713 [debug] [Thread-1 (]: On seed.crm_erp_dwh.CUST_AZ12: 
+          insert into "crm_erp_dwh"."public_public"."CUST_AZ12" ("CID", "BDATE", "GEN") values
+          (%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s)...
+[0m19:37:56.022469 [debug] [Thread-1 (]: SQL status: INSERT 0 8484 in 0.071 seconds
+[0m19:37:56.211913 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.crm_erp_dwh.CUST_AZ12"
+[0m19:37:56.324175 [debug] [Thread-1 (]: On seed.crm_erp_dwh.CUST_AZ12: COMMIT
+[0m19:37:56.336768 [debug] [Thread-1 (]: Using postgres connection "seed.crm_erp_dwh.CUST_AZ12"
+[0m19:37:56.381007 [debug] [Thread-1 (]: On seed.crm_erp_dwh.CUST_AZ12: COMMIT
+[0m19:37:56.437775 [debug] [Thread-1 (]: SQL status: COMMIT in 0.028 seconds
+[0m19:37:56.461422 [debug] [Thread-1 (]: On seed.crm_erp_dwh.CUST_AZ12: Close
+[0m19:37:56.577621 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4b514df6-1934-467d-a32e-4e4d33b03b83', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f867428e910>]}
+[0m19:37:56.611448 [info ] [Thread-1 (]: 1 of 6 OK loaded seed file public_public.CUST_AZ12 ............................. [[32mINSERT 18484[0m in 22.81s]
+[0m19:37:56.689202 [debug] [Thread-1 (]: Finished running node seed.crm_erp_dwh.CUST_AZ12
+[0m19:37:59.536677 [debug] [Thread-4 (]: Using postgres connection "seed.crm_erp_dwh.cust_info"
+[0m19:37:59.550203 [debug] [Thread-4 (]: On seed.crm_erp_dwh.cust_info: 
+          insert into "crm_erp_dwh"."public_public"."cust_info" ("cst_id", "cst_key", "cst_firstname", "cst_lastname", "cst_marital_status", "cst_gndr", "cst_create_date") values
+          (%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),...
+[0m19:37:59.684726 [debug] [Thread-4 (]: SQL status: INSERT 0 10000 in 0.122 seconds
+[0m19:38:11.825463 [debug] [Thread-3 (]: Using postgres connection "seed.crm_erp_dwh.sales_details"
+[0m19:38:11.843960 [debug] [Thread-3 (]: On seed.crm_erp_dwh.sales_details: 
+          insert into "crm_erp_dwh"."public_public"."sales_details" ("sls_ord_num", "sls_prd_key", "sls_cust_id", "sls_order_dt", "sls_ship_dt", "sls_due_dt", "sls_sales", "sls_quantity", "sls_price") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s...
+[0m19:38:12.029399 [debug] [Thread-3 (]: SQL status: INSERT 0 10000 in 0.168 seconds
+[0m19:38:12.502562 [debug] [Thread-4 (]: Using postgres connection "seed.crm_erp_dwh.cust_info"
+[0m19:38:12.510189 [debug] [Thread-4 (]: On seed.crm_erp_dwh.cust_info: 
+          insert into "crm_erp_dwh"."public_public"."cust_info" ("cst_id", "cst_key", "cst_firstname", "cst_lastname", "cst_marital_status", "cst_gndr", "cst_create_date") values
+          (%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),...
+[0m19:38:12.625106 [debug] [Thread-4 (]: SQL status: INSERT 0 8494 in 0.102 seconds
+[0m19:38:12.639531 [debug] [Thread-4 (]: Writing runtime SQL for node "seed.crm_erp_dwh.cust_info"
+[0m19:38:12.679151 [debug] [Thread-4 (]: On seed.crm_erp_dwh.cust_info: COMMIT
+[0m19:38:12.691196 [debug] [Thread-4 (]: Using postgres connection "seed.crm_erp_dwh.cust_info"
+[0m19:38:12.703656 [debug] [Thread-4 (]: On seed.crm_erp_dwh.cust_info: COMMIT
+[0m19:38:12.722315 [debug] [Thread-4 (]: SQL status: COMMIT in 0.006 seconds
+[0m19:38:12.735818 [debug] [Thread-4 (]: On seed.crm_erp_dwh.cust_info: Close
+[0m19:38:12.758292 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4b514df6-1934-467d-a32e-4e4d33b03b83', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f867425a010>]}
+[0m19:38:12.777424 [info ] [Thread-4 (]: 4 of 6 OK loaded seed file public_public.cust_info ............................. [[32mINSERT 18494[0m in 38.99s]
+[0m19:38:12.801381 [debug] [Thread-4 (]: Finished running node seed.crm_erp_dwh.cust_info
+[0m19:38:21.851229 [debug] [Thread-3 (]: Using postgres connection "seed.crm_erp_dwh.sales_details"
+[0m19:38:21.853591 [debug] [Thread-3 (]: On seed.crm_erp_dwh.sales_details: 
+          insert into "crm_erp_dwh"."public_public"."sales_details" ("sls_ord_num", "sls_prd_key", "sls_cust_id", "sls_order_dt", "sls_ship_dt", "sls_due_dt", "sls_sales", "sls_quantity", "sls_price") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s...
+[0m19:38:22.013367 [debug] [Thread-3 (]: SQL status: INSERT 0 10000 in 0.158 seconds
+[0m19:38:31.530399 [debug] [Thread-3 (]: Using postgres connection "seed.crm_erp_dwh.sales_details"
+[0m19:38:31.533861 [debug] [Thread-3 (]: On seed.crm_erp_dwh.sales_details: 
+          insert into "crm_erp_dwh"."public_public"."sales_details" ("sls_ord_num", "sls_prd_key", "sls_cust_id", "sls_order_dt", "sls_ship_dt", "sls_due_dt", "sls_sales", "sls_quantity", "sls_price") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s...
+[0m19:38:31.708088 [debug] [Thread-3 (]: SQL status: INSERT 0 10000 in 0.171 seconds
+[0m19:38:44.355893 [debug] [Thread-3 (]: Using postgres connection "seed.crm_erp_dwh.sales_details"
+[0m19:38:44.360151 [debug] [Thread-3 (]: On seed.crm_erp_dwh.sales_details: 
+          insert into "crm_erp_dwh"."public_public"."sales_details" ("sls_ord_num", "sls_prd_key", "sls_cust_id", "sls_order_dt", "sls_ship_dt", "sls_due_dt", "sls_sales", "sls_quantity", "sls_price") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s...
+[0m19:38:44.535073 [debug] [Thread-3 (]: SQL status: INSERT 0 10000 in 0.172 seconds
+[0m19:38:55.549896 [debug] [Thread-3 (]: Using postgres connection "seed.crm_erp_dwh.sales_details"
+[0m19:38:55.552609 [debug] [Thread-3 (]: On seed.crm_erp_dwh.sales_details: 
+          insert into "crm_erp_dwh"."public_public"."sales_details" ("sls_ord_num", "sls_prd_key", "sls_cust_id", "sls_order_dt", "sls_ship_dt", "sls_due_dt", "sls_sales", "sls_quantity", "sls_price") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s...
+[0m19:38:55.718421 [debug] [Thread-3 (]: SQL status: INSERT 0 10000 in 0.163 seconds
+[0m19:39:06.965479 [debug] [Thread-3 (]: Using postgres connection "seed.crm_erp_dwh.sales_details"
+[0m19:39:06.969035 [debug] [Thread-3 (]: On seed.crm_erp_dwh.sales_details: 
+          insert into "crm_erp_dwh"."public_public"."sales_details" ("sls_ord_num", "sls_prd_key", "sls_cust_id", "sls_order_dt", "sls_ship_dt", "sls_due_dt", "sls_sales", "sls_quantity", "sls_price") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s...
+[0m19:39:07.165535 [debug] [Thread-3 (]: SQL status: INSERT 0 10000 in 0.194 seconds
+[0m19:39:07.592337 [debug] [Thread-3 (]: Using postgres connection "seed.crm_erp_dwh.sales_details"
+[0m19:39:07.596034 [debug] [Thread-3 (]: On seed.crm_erp_dwh.sales_details: 
+          insert into "crm_erp_dwh"."public_public"."sales_details" ("sls_ord_num", "sls_prd_key", "sls_cust_id", "sls_order_dt", "sls_ship_dt", "sls_due_dt", "sls_sales", "sls_quantity", "sls_price") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s...
+[0m19:39:07.606638 [debug] [Thread-3 (]: SQL status: INSERT 0 398 in 0.008 seconds
+[0m19:39:07.609183 [debug] [Thread-3 (]: Writing runtime SQL for node "seed.crm_erp_dwh.sales_details"
+[0m19:39:07.619274 [debug] [Thread-3 (]: On seed.crm_erp_dwh.sales_details: COMMIT
+[0m19:39:07.621138 [debug] [Thread-3 (]: Using postgres connection "seed.crm_erp_dwh.sales_details"
+[0m19:39:07.622898 [debug] [Thread-3 (]: On seed.crm_erp_dwh.sales_details: COMMIT
+[0m19:39:07.627372 [debug] [Thread-3 (]: SQL status: COMMIT in 0.002 seconds
+[0m19:39:07.632335 [debug] [Thread-3 (]: On seed.crm_erp_dwh.sales_details: Close
+[0m19:39:07.635036 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4b514df6-1934-467d-a32e-4e4d33b03b83', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f867453e010>]}
+[0m19:39:07.637911 [info ] [Thread-3 (]: 6 of 6 OK loaded seed file public_public.sales_details ......................... [[32mINSERT 60398[0m in 88.45s]
+[0m19:39:07.640884 [debug] [Thread-3 (]: Finished running node seed.crm_erp_dwh.sales_details
+[0m19:39:07.646859 [debug] [MainThread]: Using postgres connection "master"
+[0m19:39:07.650149 [debug] [MainThread]: On master: BEGIN
+[0m19:39:07.651867 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m19:39:07.665169 [debug] [MainThread]: SQL status: BEGIN in 0.013 seconds
+[0m19:39:07.668655 [debug] [MainThread]: On master: COMMIT
+[0m19:39:07.670494 [debug] [MainThread]: Using postgres connection "master"
+[0m19:39:07.672259 [debug] [MainThread]: On master: COMMIT
+[0m19:39:07.674551 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m19:39:07.675943 [debug] [MainThread]: On master: Close
+[0m19:39:07.678347 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:39:07.681957 [debug] [MainThread]: Connection 'seed.crm_erp_dwh.CUST_AZ12' was properly closed.
+[0m19:39:07.683734 [debug] [MainThread]: Connection 'seed.crm_erp_dwh.LOC_A101' was properly closed.
+[0m19:39:07.685528 [debug] [MainThread]: Connection 'seed.crm_erp_dwh.sales_details' was properly closed.
+[0m19:39:07.686932 [debug] [MainThread]: Connection 'seed.crm_erp_dwh.cust_info' was properly closed.
+[0m19:39:07.688470 [info ] [MainThread]: 
+[0m19:39:07.690428 [info ] [MainThread]: Finished running 6 seeds in 0 hours 1 minutes and 34.18 seconds (94.18s).
+[0m19:39:07.693397 [debug] [MainThread]: Command end result
+[0m19:39:07.788789 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/dbt_project/target/manifest.json
+[0m19:39:07.795732 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/dbt_project/target/semantic_manifest.json
+[0m19:39:07.809614 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/dbt_project/target/run_results.json
+[0m19:39:07.812245 [info ] [MainThread]: 
+[0m19:39:07.816096 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:39:07.818547 [info ] [MainThread]: 
+[0m19:39:07.820977 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=0 SKIP=0 TOTAL=6
+[0m19:39:07.824474 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": true, "command_wall_clock_time": 96.18456, "process_in_blocks": "2160", "process_kernel_time": 0.973259, "process_mem_max_rss": "263748", "process_out_blocks": "120", "process_user_time": 95.97627}
+[0m19:39:07.828725 [debug] [MainThread]: Command `dbt seed` succeeded at 19:39:07.828256 after 96.19 seconds
+[0m19:39:07.832970 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f867ef80dd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f867ef80350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f867ef80390>]}
+[0m19:39:07.835879 [debug] [MainThread]: Flushing usage events
+[0m19:39:08.319206 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:40:28.661575 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f45b487bc10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f45b487be50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f45b487b9d0>]}
+
+
+============================== 19:40:28.668446 | c505e588-8e63-462a-9c5d-ec66206c2c03 ==============================
+[0m19:40:28.668446 [info ] [MainThread]: Running with dbt=1.9.4
+[0m19:40:28.671606 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/usr/app/dbt_project', 'log_path': '/usr/app/dbt_project/logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt docs generate', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m19:40:28.853710 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c505e588-8e63-462a-9c5d-ec66206c2c03', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f45b6446bd0>]}
+[0m19:40:28.920017 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c505e588-8e63-462a-9c5d-ec66206c2c03', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f45b729a590>]}
+[0m19:40:28.923377 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m19:40:28.998901 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m19:40:29.128317 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:40:29.130686 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:40:29.137187 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 4 unused configuration paths:
+- models.crm_erp_dwh.silver
+- models.crm_erp_dwh.bronze
+- models.crm_erp_dwh.gold.marts
+- models.crm_erp_dwh.gold
+[0m19:40:29.158993 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c505e588-8e63-462a-9c5d-ec66206c2c03', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f45b312e390>]}
+[0m19:40:29.186989 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c505e588-8e63-462a-9c5d-ec66206c2c03', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f45b399f390>]}
+[0m19:40:29.188766 [info ] [MainThread]: Found 6 seeds, 433 macros
+[0m19:40:29.190726 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c505e588-8e63-462a-9c5d-ec66206c2c03', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f45b313a450>]}
+[0m19:40:29.194408 [info ] [MainThread]: 
+[0m19:40:29.198167 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m19:40:29.200764 [info ] [MainThread]: 
+[0m19:40:29.203035 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m19:40:29.209898 [debug] [ThreadPool]: Acquiring new postgres connection 'list_crm_erp_dwh_public_public'
+[0m19:40:29.255649 [debug] [ThreadPool]: Using postgres connection "list_crm_erp_dwh_public_public"
+[0m19:40:29.258614 [debug] [ThreadPool]: On list_crm_erp_dwh_public_public: BEGIN
+[0m19:40:29.261238 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:40:29.272818 [debug] [ThreadPool]: SQL status: BEGIN in 0.011 seconds
+[0m19:40:29.274589 [debug] [ThreadPool]: Using postgres connection "list_crm_erp_dwh_public_public"
+[0m19:40:29.276378 [debug] [ThreadPool]: On list_crm_erp_dwh_public_public: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "connection_name": "list_crm_erp_dwh_public_public"} */
+select
+      'crm_erp_dwh' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_public'
+    union all
+    select
+      'crm_erp_dwh' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_public'
+    union all
+    select
+      'crm_erp_dwh' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_public'
+  
+[0m19:40:29.282437 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.005 seconds
+[0m19:40:29.285287 [debug] [ThreadPool]: On list_crm_erp_dwh_public_public: ROLLBACK
+[0m19:40:29.287418 [debug] [ThreadPool]: On list_crm_erp_dwh_public_public: Close
+[0m19:40:29.299559 [debug] [MainThread]: Using postgres connection "master"
+[0m19:40:29.301361 [debug] [MainThread]: On master: BEGIN
+[0m19:40:29.303698 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:40:29.316058 [debug] [MainThread]: SQL status: BEGIN in 0.012 seconds
+[0m19:40:29.317810 [debug] [MainThread]: Using postgres connection "master"
+[0m19:40:29.319348 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m19:40:29.325434 [debug] [MainThread]: SQL status: SELECT 1 in 0.004 seconds
+[0m19:40:29.329180 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c505e588-8e63-462a-9c5d-ec66206c2c03', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f45b4bb82d0>]}
+[0m19:40:29.331119 [debug] [MainThread]: On master: ROLLBACK
+[0m19:40:29.332745 [debug] [MainThread]: On master: Close
+[0m19:40:29.337414 [debug] [Thread-1 (]: Began running node seed.crm_erp_dwh.CUST_AZ12
+[0m19:40:29.340005 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_crm_erp_dwh_public_public, now seed.crm_erp_dwh.CUST_AZ12)
+[0m19:40:29.338587 [debug] [Thread-3 (]: Began running node seed.crm_erp_dwh.PX_CAT_G1V2
+[0m19:40:29.338902 [debug] [Thread-4 (]: Began running node seed.crm_erp_dwh.cust_info
+[0m19:40:29.344832 [debug] [Thread-4 (]: Acquiring new postgres connection 'seed.crm_erp_dwh.cust_info'
+[0m19:40:29.341574 [debug] [Thread-1 (]: Began compiling node seed.crm_erp_dwh.CUST_AZ12
+[0m19:40:29.343200 [debug] [Thread-3 (]: Acquiring new postgres connection 'seed.crm_erp_dwh.PX_CAT_G1V2'
+[0m19:40:29.337865 [debug] [Thread-2 (]: Began running node seed.crm_erp_dwh.LOC_A101
+[0m19:40:29.346189 [debug] [Thread-4 (]: Began compiling node seed.crm_erp_dwh.cust_info
+[0m19:40:29.358984 [debug] [Thread-1 (]: Began executing node seed.crm_erp_dwh.CUST_AZ12
+[0m19:40:29.360715 [debug] [Thread-3 (]: Began compiling node seed.crm_erp_dwh.PX_CAT_G1V2
+[0m19:40:29.362895 [debug] [Thread-2 (]: Acquiring new postgres connection 'seed.crm_erp_dwh.LOC_A101'
+[0m19:40:29.366721 [debug] [Thread-4 (]: Began executing node seed.crm_erp_dwh.cust_info
+[0m19:40:29.369055 [debug] [Thread-1 (]: Finished running node seed.crm_erp_dwh.CUST_AZ12
+[0m19:40:29.372501 [debug] [Thread-3 (]: Began executing node seed.crm_erp_dwh.PX_CAT_G1V2
+[0m19:40:29.374574 [debug] [Thread-2 (]: Began compiling node seed.crm_erp_dwh.LOC_A101
+[0m19:40:29.376743 [debug] [Thread-4 (]: Finished running node seed.crm_erp_dwh.cust_info
+[0m19:40:29.378464 [debug] [Thread-1 (]: Began running node seed.crm_erp_dwh.prd_info
+[0m19:40:29.380861 [debug] [Thread-3 (]: Finished running node seed.crm_erp_dwh.PX_CAT_G1V2
+[0m19:40:29.384912 [debug] [Thread-2 (]: Began executing node seed.crm_erp_dwh.LOC_A101
+[0m19:40:29.386701 [debug] [Thread-4 (]: Began running node seed.crm_erp_dwh.sales_details
+[0m19:40:29.388058 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.crm_erp_dwh.CUST_AZ12, now seed.crm_erp_dwh.prd_info)
+[0m19:40:29.390976 [debug] [Thread-2 (]: Finished running node seed.crm_erp_dwh.LOC_A101
+[0m19:40:29.392565 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly seed.crm_erp_dwh.cust_info, now seed.crm_erp_dwh.sales_details)
+[0m19:40:29.394055 [debug] [Thread-1 (]: Began compiling node seed.crm_erp_dwh.prd_info
+[0m19:40:29.397319 [debug] [Thread-4 (]: Began compiling node seed.crm_erp_dwh.sales_details
+[0m19:40:29.400629 [debug] [Thread-1 (]: Began executing node seed.crm_erp_dwh.prd_info
+[0m19:40:29.403803 [debug] [Thread-4 (]: Began executing node seed.crm_erp_dwh.sales_details
+[0m19:40:29.405982 [debug] [Thread-1 (]: Finished running node seed.crm_erp_dwh.prd_info
+[0m19:40:29.408896 [debug] [Thread-4 (]: Finished running node seed.crm_erp_dwh.sales_details
+[0m19:40:29.414671 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:40:29.416340 [debug] [MainThread]: Connection 'seed.crm_erp_dwh.prd_info' was properly closed.
+[0m19:40:29.417888 [debug] [MainThread]: Connection 'seed.crm_erp_dwh.PX_CAT_G1V2' was properly closed.
+[0m19:40:29.419735 [debug] [MainThread]: Connection 'seed.crm_erp_dwh.sales_details' was properly closed.
+[0m19:40:29.421085 [debug] [MainThread]: Connection 'seed.crm_erp_dwh.LOC_A101' was properly closed.
+[0m19:40:29.423466 [debug] [MainThread]: Command end result
+[0m19:40:29.537433 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/dbt_project/target/manifest.json
+[0m19:40:29.543842 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/dbt_project/target/semantic_manifest.json
+[0m19:40:29.557634 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/dbt_project/target/run_results.json
+[0m19:40:29.594462 [debug] [MainThread]: Acquiring new postgres connection 'generate_catalog'
+[0m19:40:29.595948 [info ] [MainThread]: Building catalog
+[0m19:40:29.612383 [debug] [ThreadPool]: Acquiring new postgres connection 'crm_erp_dwh.information_schema'
+[0m19:40:29.626023 [debug] [ThreadPool]: Using postgres connection "crm_erp_dwh.information_schema"
+[0m19:40:29.628573 [debug] [ThreadPool]: On crm_erp_dwh.information_schema: BEGIN
+[0m19:40:29.630949 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:40:29.643283 [debug] [ThreadPool]: SQL status: BEGIN in 0.012 seconds
+[0m19:40:29.645652 [debug] [ThreadPool]: Using postgres connection "crm_erp_dwh.information_schema"
+[0m19:40:29.647968 [debug] [ThreadPool]: On crm_erp_dwh.information_schema: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "crm_erp_dwh", "target_name": "dev", "connection_name": "crm_erp_dwh.information_schema"} */
+
+    
+    
+
+    select
+        'crm_erp_dwh' as table_database,
+        sch.nspname as table_schema,
+        tbl.relname as table_name,
+        case tbl.relkind
+            when 'v' then 'VIEW'
+            when 'm' then 'MATERIALIZED VIEW'
+            else 'BASE TABLE'
+        end as table_type,
+        tbl_desc.description as table_comment,
+        col.attname as column_name,
+        col.attnum as column_index,
+        pg_catalog.format_type(col.atttypid, col.atttypmod) as column_type,
+        col_desc.description as column_comment,
+        pg_get_userbyid(tbl.relowner) as table_owner
+
+    from pg_catalog.pg_namespace sch
+    join pg_catalog.pg_class tbl on tbl.relnamespace = sch.oid
+    join pg_catalog.pg_attribute col on col.attrelid = tbl.oid
+    left outer join pg_catalog.pg_description tbl_desc on (tbl_desc.objoid = tbl.oid and tbl_desc.objsubid = 0)
+    left outer join pg_catalog.pg_description col_desc on (col_desc.objoid = tbl.oid and col_desc.objsubid = col.attnum)
+    where ((upper(sch.nspname) = upper('public_public') and
+           upper(tbl.relname) = upper('PX_CAT_G1V2')) or (upper(sch.nspname) = upper('public_public') and
+           upper(tbl.relname) = upper('cust_info')) or (upper(sch.nspname) = upper('public_public') and
+           upper(tbl.relname) = upper('CUST_AZ12')) or (upper(sch.nspname) = upper('public_public') and
+           upper(tbl.relname) = upper('sales_details')) or (upper(sch.nspname) = upper('public_public') and
+           upper(tbl.relname) = upper('LOC_A101')) or (upper(sch.nspname) = upper('public_public') and
+           upper(tbl.relname) = upper('prd_info')))
+      and not pg_is_other_temp_schema(sch.oid) -- not a temporary schema belonging to another session
+      and tbl.relpersistence in ('p', 'u') -- [p]ermanent table or [u]nlogged table. Exclude [t]emporary tables
+      and tbl.relkind in ('r', 'v', 'f', 'p', 'm') -- o[r]dinary table, [v]iew, [f]oreign table, [p]artitioned table, [m]aterialized view. Other values are [i]ndex, [S]equence, [c]omposite type, [t]OAST table
+      and col.attnum > 0 -- negative numbers are used for system columns such as oid
+      and not col.attisdropped -- column as not been dropped
+
+    order by
+        sch.nspname,
+        tbl.relname,
+        col.attnum
+[0m19:40:29.674723 [debug] [ThreadPool]: SQL status: SELECT 32 in 0.024 seconds
+[0m19:40:29.681469 [debug] [ThreadPool]: On crm_erp_dwh.information_schema: ROLLBACK
+[0m19:40:29.683802 [debug] [ThreadPool]: On crm_erp_dwh.information_schema: Close
+[0m19:40:29.700028 [debug] [MainThread]: Wrote artifact CatalogArtifact to /usr/app/dbt_project/target/catalog.json
+[0m19:40:29.786423 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/dbt_project/target/manifest.json
+[0m19:40:29.791683 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/dbt_project/target/semantic_manifest.json
+[0m19:40:29.793311 [info ] [MainThread]: Catalog written to /usr/app/dbt_project/target/catalog.json
+[0m19:40:29.795817 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_success": true, "command_wall_clock_time": 1.2281587, "process_in_blocks": "3416", "process_kernel_time": 0.284693, "process_mem_max_rss": "116580", "process_out_blocks": "0", "process_user_time": 2.205858}
+[0m19:40:29.797949 [debug] [MainThread]: Command `dbt docs generate` succeeded at 19:40:29.797727 after 1.23 seconds
+[0m19:40:29.799727 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m19:40:29.802051 [debug] [MainThread]: Connection 'crm_erp_dwh.information_schema' was properly closed.
+[0m19:40:29.804989 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f45b1ce9a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f45b1ce9210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f45b1cead10>]}
+[0m19:40:29.807796 [debug] [MainThread]: Flushing usage events
+[0m19:40:30.202753 [debug] [MainThread]: An error was encountered while trying to flush usage events

@@ -35,13 +35,20 @@ models:
     bronze:
       +materialized: table
       +schema: bronze
-      
     silver:
       +materialized: table
       +schema: silver
-      
     gold:
       +materialized: view
       +schema: gold
       marts:
         +materialized: view
+
+seeds:
+  crm_erp_dwh:
+    +schema: public  # All seeds will go to this schema
+    # Custom schemas for specific seed directories
+    erp:
+      +schema: public
+    crm:
+      +schema: public
