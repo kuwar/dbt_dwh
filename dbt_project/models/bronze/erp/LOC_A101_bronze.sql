@@ -5,4 +5,6 @@
 }}
 
 SELECT * 
+  CID,
+  CNTRY
 FROM {{ ref("LOC_A101") }}
