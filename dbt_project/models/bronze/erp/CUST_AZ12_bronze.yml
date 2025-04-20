@@ -1,0 +1,6 @@
+---
+version: 2
+
+models:
+  - name: CUST_AZ12_bronze
+    description: "Bronze layer customer demography"

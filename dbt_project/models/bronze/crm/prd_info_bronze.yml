@@ -1,0 +1,6 @@
+---
+version: 2
+
+models:
+  - name: prd_info_bronze
+    description: "Product information in bronze layer"

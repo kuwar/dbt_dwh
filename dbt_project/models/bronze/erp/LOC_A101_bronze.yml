@@ -1,0 +1,6 @@
+---
+version: 2
+
+models:
+  - name: LOC_A101_bronze
+    description: "Bronze layer customer location information"

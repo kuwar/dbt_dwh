@@ -1,0 +1,6 @@
+---
+version: 2
+
+models:
+  - name: PX_CAT_G1V2_bronze
+    description: "Bronze layer product category along with maintenance information"
