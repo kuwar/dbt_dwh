@@ -5,7 +5,7 @@
 }}
 
 SELECT 
-  CID,
-  BDATE,
-  GEN
+  "CID",
+  "BDATE",
+  "GEN"
 FROM {{ ref("CUST_AZ12") }}
