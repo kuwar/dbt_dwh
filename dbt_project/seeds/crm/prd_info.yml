@@ -1,0 +1,30 @@
+---
+version: 2
+
+seeds:
+  - name: prd_info
+    description: |
+      Master table containing product information, including product identifiers, names, costs, and lifecycle dates.
+    columns:
+      - name: prd_id
+        description: "Unique numeric identifier for the product."
+
+      - name: prd_key
+        description: "Product key/serial number (e.g., CO-RF-FR-R92B-58)."
+
+      - name: prd_nm
+        description: "Human-readable product name (e.g., HL Road Frame - Black- 58)."
+
+      - name: prd_cost
+        description: "Cost of the product (currency not specified)."
+
+      - name: prd_line
+        description: |
+          Product line code (e.g., "R" for Road Frame).
+          Check the `prd_line` column for valid values.
+
+      - name: prd_start_dt
+        description: "Date when the product was first introduced (format: DD/MM/YYYY)."
+
+      - name: prd_end_dt
+        description: "Date when the product was discontinued (null if still active)."

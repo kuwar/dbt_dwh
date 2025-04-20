@@ -1,0 +1,12 @@
+---
+version: 2
+
+seeds:
+  - name: LOC_A101
+    description: |
+      Reference table mapping location identifiers i.e., countries of customers.
+    columns:
+      - name: CID
+        description: "Customer identifier"
+      - name: CNTRY
+        description: "Full country name"

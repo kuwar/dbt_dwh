@@ -1,0 +1,34 @@
+---
+version: 2
+
+seeds:
+  - name: sales_details
+    description: |
+      Fact table recording sales transactions, including order details, customer IDs, product keys, and financial metrics.
+    columns:
+      - name: sls_ord_num
+        description: "Unique sales order number (e.g., SO43697). Primary key for the table."
+
+      - name: sls_prd_key
+        description: "Foreign key linking to the product in `prd_info` (e.g., BK-R93R-62)."
+
+      - name: sls_cust_id
+        description: "Unique identifier for the customer placing the order."
+
+      - name: sls_order_dt
+        description: "Date when the order was placed (format: YYYYMMDD)."
+
+      - name: sls_ship_dt
+        description: "Date when the order was shipped (format: YYYYMMDD)."
+
+      - name: sls_due_dt
+        description: "Date when payment is due (format: YYYYMMDD)."
+
+      - name: sls_sales
+        description: "Total sales amount for the order (calculated as sls_quantity * sls_price)."
+
+      - name: sls_quantity
+        description: "Number of units sold in this order."
+
+      - name: sls_price
+        description: "Price per unit at the time of sale."

@@ -1,0 +1,29 @@
+---
+version: 2
+
+seeds:
+  - name: CUST_AZ12
+    description: |
+      Customer demographic data containing unique identifiers, birth dates, and gender information.
+
+    columns:
+      - name: CID
+        description: "Unique customer identifier (format: NASAW followed by 10 digits)"
+        meta:
+          pii: true  # Entire seed contains PII
+          data_classification: sensitive
+          data_owner: "Customer Success Team"
+
+      - name: BDATE
+        description: "Customer's date of birth in ISO format (YYYY-MM-DD)"
+        meta:
+          pii: true
+          data_classification: sensitive
+          encryption_required: true
+
+      - name: GEN
+        description: "Customer's self-reported gender (Male/Female)"
+        meta:
+          pii: true
+          data_classification: sensitive
+          pii_type: demographic

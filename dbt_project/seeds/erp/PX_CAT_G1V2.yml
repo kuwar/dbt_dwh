@@ -1,0 +1,24 @@
+---
+version: 2
+
+seeds:
+  - name: PX_CAT_G1V2
+    description: |
+      Product category classification system with maintenance requirements.
+
+    columns:
+      - name: ID
+        description: |
+          Unique category code following the pattern [AC]_[2-3 letters].
+          Example: AC_BR = Accessories/Bike Racks
+
+      - name: CAT
+        description: "Primary product category grouping"
+
+      - name: SUBCAT
+        description: "Specific product subcategory within the main category"
+
+      - name: MAINTENANCE
+        description: |
+          Flag indicating if regular maintenance is required for products in this category.
+          Valid values: Yes/No
