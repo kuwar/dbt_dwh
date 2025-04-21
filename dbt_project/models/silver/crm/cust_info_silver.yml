@@ -1,0 +1,25 @@
+---
+version: 2
+
+models:
+  - name: cust_info_silver
+    description: "Transformed customer information"
+
+    columns:
+      - name: cst_id
+        data_type: INTEGER
+      - name: cst_key
+        data_type: TEXT
+      - name: cst_firstname
+        data_type: TEXT
+      - name: cst_lastname
+        data_type: TEXT
+      - name: cst_marital_status
+        data_type: TEXT
+      - name: cst_gndr
+        data_type: TEXT
+      - name: cst_create_date
+        data_type: DATE
+      - name: dwh_create_date
+        data_type: TIMESTAMP
+        description: "Timestamp, when the data was inserted into silver layer"
