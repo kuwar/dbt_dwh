@@ -1,0 +1,37 @@
+---
+version: 2
+
+models:
+  - name: sales_details_silver
+    description: "Transformed sales details"
+
+    columns:
+      - name: sls_ord_num
+        data_type: TEXT
+
+      - name: sls_prd_key
+        data_type: TEXT
+
+      - name: sls_cust_id
+        data_type: INT
+
+      - name: sls_order_dt
+        data_type: DATE
+
+      - name: sls_ship_dt
+        data_type: DATE
+
+      - name: sls_due_dt
+        data_type: DATE
+
+      - name: sls_sales
+        data_type: INT
+
+      - name: sls_quantity
+        data_type: INT
+
+      - name: sls_price
+        data_type: INT
+
+      - name: dwh_create_date
+        data_type: TIMESTAMP
