@@ -1,0 +1,35 @@
+---
+version: 2
+
+models:
+  - name: prd_info_silver
+    description: "Transformed product information"
+
+    columns:
+      - name: prd_id
+        data_type: INT
+
+      - name: cat_id
+        data_type: TEXT
+
+      - name: prd_key
+        data_type: TEXT
+
+      - name: prd_nm
+        data_type: TEXT
+
+      - name: prd_cost
+        data_type: INT
+
+      - name: prd_line
+        data_type: TEXT
+
+      - name: prd_start_dt
+        data_type: DATE
+
+      - name: prd_end_dt
+        data_type: DATE
+
+      - name: dwh_create_date
+        data_type: TIMESTAMP
+        description: "Timestamp, when the data was inserted into silver layer"

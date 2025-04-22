@@ -4,3 +4,4 @@ venv
 .env.example
 dbt_project/target/
 dbt_project/logs/dbt.log
+.vscode/
