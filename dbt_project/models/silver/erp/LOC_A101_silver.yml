@@ -7,7 +7,10 @@ models:
     columns:
       - name: cid
         data_type: TEXT
+
       - name: cntry
         data_type: TEXT
+
       - name: dwh_create_date
+        description: "Date when the record was created in the data warehouse"
         data_type: TIMESTAMP

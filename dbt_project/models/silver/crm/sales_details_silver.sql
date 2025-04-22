@@ -37,5 +37,6 @@ SELECT
         WHEN sls_price IS NULL OR sls_price <= 0 
             THEN sls_sales / NULLIF(sls_quantity, 0)
         ELSE sls_price  -- Derive price if original value is invalid
-    END AS sls_price
+    END AS sls_price,
+    CURRENT_TIMESTAMP AS dwh_create_date
 FROM {{ ref("sales_details_bronze") }}

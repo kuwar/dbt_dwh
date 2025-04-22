@@ -31,5 +31,5 @@ models:
         data_type: DATE
 
       - name: dwh_create_date
+        description: "Date when the record was created in the data warehouse"
         data_type: TIMESTAMP
-        description: "Timestamp, when the data was inserted into silver layer"

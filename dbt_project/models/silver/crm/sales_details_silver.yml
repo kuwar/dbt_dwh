@@ -34,4 +34,5 @@ models:
         data_type: INT
 
       - name: dwh_create_date
+        description: "Date when the record was created in the data warehouse"
         data_type: TIMESTAMP
