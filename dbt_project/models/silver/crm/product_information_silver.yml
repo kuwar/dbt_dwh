@@ -2,7 +2,7 @@
 version: 2
 
 models:
-  - name: prd_info_silver
+  - name: product_information_silver
     description: "Transformed product information"
 
     columns:

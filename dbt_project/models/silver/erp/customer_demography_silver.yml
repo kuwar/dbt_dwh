@@ -2,7 +2,7 @@
 version: 2
 
 models:
-  - name: CUST_AZ12_silver
+  - name: customer_demography_silver
     description: "Transformed customer demographic information"
 
     columns:

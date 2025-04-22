@@ -2,7 +2,7 @@
 version: 2
 
 models:
-  - name: PX_CAT_G1V2_silver
+  - name: product_categories_silver
     description: "Transformed data for product categories and subcategories"
     columns:
       - name: id

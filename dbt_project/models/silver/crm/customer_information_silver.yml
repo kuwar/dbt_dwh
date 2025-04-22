@@ -2,7 +2,7 @@
 version: 2
 
 models:
-  - name: cust_info_silver
+  - name: customer_information_silver
     description: "Transformed customer information"
 
     columns:

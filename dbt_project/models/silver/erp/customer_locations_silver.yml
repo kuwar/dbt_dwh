@@ -2,7 +2,7 @@
 version: 2
 
 models:
-  - name: LOC_A101_silver
+  - name: customer_locations_silver
     description: "Transformed location data from the ERP system"
     columns:
       - name: cid
