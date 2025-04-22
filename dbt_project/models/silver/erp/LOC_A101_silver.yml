@@ -1,0 +1,13 @@
+---
+version: 2
+
+models:
+  - name: LOC_A101_silver
+    description: "Transformed location data from the ERP system"
+    columns:
+      - name: cid
+        data_type: TEXT
+      - name: cntry
+        data_type: TEXT
+      - name: dwh_create_date
+        data_type: TIMESTAMP
