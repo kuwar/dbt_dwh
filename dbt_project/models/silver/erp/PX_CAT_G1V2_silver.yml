@@ -1,0 +1,26 @@
+---
+version: 2
+
+models:
+  - name: PX_CAT_G1V2_silver
+    description: "Transformed data for product categories and subcategories"
+    columns:
+      - name: id
+        description: "Unique identifier"
+        data_type: TEXT
+
+      - name: cat
+        description: "Category"
+        data_type: TEXT
+
+      - name: subcat
+        description: "Subcategory"
+        data_type: TEXT
+
+      - name: maintenance
+        description: "Maintenance information"
+        data_type: TEXT
+
+      - name: dwh_create_date
+        description: "Date when the record was created in the data warehouse"
+        data_type: TIMESTAMP
