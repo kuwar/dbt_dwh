@@ -1,0 +1,19 @@
+---
+version: 2
+
+models:
+  - name: CUST_AZ12_silver
+    description: "Transformed customer demographic information"
+
+    columns:
+      - name: cid
+        data_type: TEXT
+
+      - name: bdate
+        data_type: DATE
+
+      - name: gen
+        data_type: TEXT
+
+      - name: dwh_create_date
+        data_type: TIMESTAMP
