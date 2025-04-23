@@ -8,30 +8,63 @@ models:
     columns:
       - name: sls_ord_num
         data_type: TEXT
+        tests:
+          - not_null
 
       - name: sls_prd_key
         data_type: TEXT
+        tests:
+          - not_null
+          - relationships:
+              to: ref('product_information_silver')
+              field: prd_key
 
       - name: sls_cust_id
-        data_type: INT
+        data_type: INTEGER
+        tests:
+          - not_null
+          - relationships:
+              to: ref('customer_information_silver')
+              field: cst_id
 
       - name: sls_order_dt
         data_type: DATE
+        tests:
+          - dbt_expectations.expect_column_values_to_be_in_type_list:
+              column_type_list: [date, null]
+          - _is_less_than_or_equal_to:
+              compare_to: sls_ship_dt
+          - _is_less_than_or_equal_to:
+              compare_to: sls_due_dt
 
       - name: sls_ship_dt
         data_type: DATE
+        tests:
+          - dbt_expectations.expect_column_values_to_be_in_type_list:
+              column_type_list: [date, null]
+          - _is_less_than_or_equal_to:
+              compare_to: sls_due_dt
 
       - name: sls_due_dt
         data_type: DATE
+        tests:
+          - dbt_expectations.expect_column_values_to_be_in_type_list:
+              column_type_list: [date, null]
 
       - name: sls_sales
-        data_type: INT
+        data_type: INTEGER
+        tests:
+          - not_null
 
       - name: sls_quantity
-        data_type: INT
+        data_type: INTEGER
+        tests:
+          - not_null
 
       - name: sls_price
-        data_type: INT
+        data_type: INTEGER
+        tests:
+          - not_null
 
       - name: dwh_create_date
         description: "Date when the record was created in the data warehouse"

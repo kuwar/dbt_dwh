@@ -26,3 +26,6 @@ dbt docs serve --port 8080
 
 # run dbt-docs service on demand
 docker-compose --profile docs up dbt-docs
+
+# validating models
+dbt build --select package:dbt_project_evaluator

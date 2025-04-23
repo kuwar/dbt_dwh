@@ -8,12 +8,29 @@ models:
     columns:
       - name: cid
         data_type: TEXT
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('customer_information_silver')
+              field: cst_key
+              where: "cid IS NOT NULL"
 
       - name: bdate
         data_type: DATE
+        tests:
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              column_type: date
+          - dbt_utils.expression_is_true:
+              expression: "<= CURRENT_DATE"
 
       - name: gen
         data_type: TEXT
+        tests:
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              column_type: text
+          - dbt_expectations.expect_column_values_to_be_in_set:
+              value_set: ['Male', 'Female', 'n/a']
 
       - name: dwh_create_date
         description: "Date when the record was created in the data warehouse"
