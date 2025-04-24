@@ -1,0 +1,86 @@
+---
+version: 2
+
+models:
+  - name: dim_customers_gold
+    description: |
+      A dimensional table containing customer details for the sales mart.
+
+    columns:
+      - name: customer_key
+        description: "Primary key for the customer - Surrogate Key."
+        data_type: INTEGER
+        tests:
+          - not_null
+          - unique
+
+      - name: customer_id
+        description: "Unique identifier for the customer."
+        data_type: INTEGER
+        tests:
+          - not_null
+          - unique
+
+      - name: customer_number
+        description: "Customer number used for business purposes."
+        data_type: TEXT
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              column_type: text
+
+      - name: first_name
+        description: "First name of the customer."
+        data_type: TEXT
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              column_type: text
+
+      - name: last_name
+        description: "Last name of the customer."
+        data_type: TEXT
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              column_type: text
+
+      - name: country
+        description: "Country of residence of the customer."
+        data_type: TEXT
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              column_type: text
+
+      - name: marital_status
+        description: "Marital status of the customer."
+        data_type: TEXT
+        tests:
+          - dbt_expectations.expect_column_values_to_be_in_set:
+              value_set: ['Single', 'Married']
+
+      - name: gender
+        description: "Gender of the customer."
+        data_type: TEXT
+        tests:
+          - dbt_expectations.expect_column_values_to_be_in_set:
+              value_set: ['Male', 'Female', 'n/a']
+
+      - name: birthdate
+        description: "Birthdate of the customer."
+        data_type: DATE
+        tests:
+          - dbt_expectations.expect_column_values_to_be_in_type_list:
+              column_type_list: [date, null]
+          - dbt_utils.expression_is_true:
+              expression: "<= CURRENT_DATE"
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              column_type: date
+
+      - name: create_date
+        description: "Date when the customer record was created."
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              column_type: date

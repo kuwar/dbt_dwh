@@ -1,0 +1,75 @@
+---
+version: 2
+
+models:
+  - name: dim_products_gold
+    description: "A dimension table for products in the sales mart."
+
+    columns:
+      - name: product_id
+        description: "Unique identifier for the product - Surrogate Key."
+        tests:
+          - unique
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_unique
+
+      - name: product_number
+        description: "Product number identifier."
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              column_type: text
+
+      - name: product_name
+        description: "Name of the product."
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              column_type: text
+
+      - name: category_id
+        description: "Identifier for the product category."
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              column_type: text
+
+      - name: category
+        description: "Category of the product."
+        tests:
+          - dbt_expectations.expect_column_values_to_be_in_type_list:
+              column_type_list: [text, null]
+
+      - name: subcategory
+        description: "Subcategory of the product."
+        tests:
+          - dbt_expectations.expect_column_values_to_be_in_type_list:
+              column_type_list: [text, null]
+
+      - name: maintenance
+        description: "Indicates if the product requires maintenance."
+        tests:
+          - dbt_expectations.expect_column_values_to_be_in_type_list:
+              column_type_list: [text, NULL]
+
+      - name: cost
+        description: "Cost of the product."
+        data_type: INTEGER
+        tests:
+          - _is_integer_or_null
+
+      - name: product_line
+        description: "Product line classification."
+        data_type: TEXT
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_in_set:
+              value_set: ['Mountain', 'Road', 'Other Sales', 'Touring', 'n/a']
+
+      - name: start_date
+        description: "Start date of the product availability."
+        data_type: DATE
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              column_type: date

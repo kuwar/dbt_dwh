@@ -1,0 +1,72 @@
+---
+version: 2
+
+models:
+  - name: fact_sales_gold
+    description: "Fact table for sales data in the gold layer."
+
+    columns:
+      - name: order_number
+        description: "Unique identifier for each sales order."
+        tests:
+          - not_null
+
+      - name: product_key
+        description: "Foreign key linking to the product dimension."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_product_gold')
+              field: product_key
+
+      - name: customer_key
+        description: "Foreign key linking to the customer dimension."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_customer_gold')
+              field: customer_key
+
+      - name: order_date
+        description: "Date when the order was placed."
+        tests:
+          - dbt_expectations.expect_column_values_to_be_in_type_list:
+              column_type_list: [date, null]
+          - _is_less_than_or_equal_to:
+              compare_to: shipping_date
+          - _is_less_than_or_equal_to:
+              compare_to: due_date
+
+      - name: shipping_date
+        description: "Date when the order was shipped."
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              column_type: date
+          - _is_less_than_or_equal_to:
+              compare_to: due_date
+
+      - name: due_date
+        description: "Date when the payment for the order is due."
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              column_type: date
+
+      - name: sales_amount
+        description: "Total sales amount for the order."
+        tests:
+          - not_null
+          - _is_integer_or_null
+
+      - name: quantity
+        description: "Quantity of items sold in the order."
+        tests:
+          - not_null
+          - _is_integer_or_null
+
+      - name: price
+        description: "Price of the product sold in the order."
+        tests:
+          - not_null
+          - _is_integer_or_null
