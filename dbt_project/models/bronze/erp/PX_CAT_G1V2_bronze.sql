@@ -8,5 +8,6 @@ SELECT
     "ID",
     "CAT",
     "SUBCAT",
-    "MAINTENANCE"
+    "MAINTENANCE",
+    CURRENT_TIMESTAMP AS _ingestion_timestamp
 FROM {{ ref("PX_CAT_G1V2") }}

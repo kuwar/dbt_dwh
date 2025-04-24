@@ -13,5 +13,6 @@ SELECT
     sls_due_dt,
     sls_sales,
     sls_quantity,
-    sls_price
+    sls_price,
+    CURRENT_TIMESTAMP AS _ingestion_timestamp
 FROM {{ ref("sales_details") }}

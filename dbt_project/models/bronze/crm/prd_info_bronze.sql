@@ -11,5 +11,6 @@ SELECT
     prd_cost,
     prd_line,
     prd_start_dt,
-    prd_end_dt
+    prd_end_dt,
+    CURRENT_TIMESTAMP AS _ingestion_timestamp
 FROM {{ ref("prd_info") }}

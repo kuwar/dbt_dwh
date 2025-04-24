@@ -6,5 +6,6 @@
 
 SELECT
     "CID",
-    "CNTRY"
+    "CNTRY",
+    CURRENT_TIMESTAMP AS _ingestion_timestamp
 FROM {{ ref("LOC_A101") }}

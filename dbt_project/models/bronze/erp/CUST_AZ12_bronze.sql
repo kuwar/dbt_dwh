@@ -7,5 +7,6 @@
 SELECT
     "CID",
     "BDATE",
-    "GEN"
+    "GEN",
+    CURRENT_TIMESTAMP AS _ingestion_timestamp
 FROM {{ ref("CUST_AZ12") }}
