@@ -43,7 +43,7 @@ services:
     <<: *dbt-config  # Reuse the shared config
     ports:
       - "8080:8080"
-    command: bash -c "cd /usr/app && dbt docs generate && dbt docs serve --port 8080"
+    command: bash -c "cd /usr/app/dbt_project && dbt docs generate && dbt docs serve --port 8080 --host 0.0.0.0"
     depends_on:
       - dbt  # Wait for dbt service to complete
     profiles:
