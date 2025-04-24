@@ -4,7 +4,8 @@ version: 2
 seeds:
   - name: sales_details
     description: |
-      Fact table recording sales transactions, including order details, customer IDs, product keys, and financial metrics.
+      Fact table recording sales transactions, including order details,
+      customer IDs, product keys, and financial metrics.
     columns:
       - name: sls_ord_num
         description: "Unique sales order number (e.g., SO43697). Primary key for the table."

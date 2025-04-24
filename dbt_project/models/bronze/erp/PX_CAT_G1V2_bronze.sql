@@ -4,9 +4,9 @@
   )
 }}
 
-SELECT 
-  "ID",
-  "CAT",
-  "SUBCAT",
-  "MAINTENANCE"
+SELECT
+    "ID",
+    "CAT",
+    "SUBCAT",
+    "MAINTENANCE"
 FROM {{ ref("PX_CAT_G1V2") }}

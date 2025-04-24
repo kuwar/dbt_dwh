@@ -1,0 +1,17 @@
+---
+extends: default
+
+rules:
+  line-length:
+    max: 120
+    level: warning
+
+ignore:
+  # List directories or file patterns to ignore
+  - 'target/'
+  - 'dbt_packages/'
+  - 'logs/'
+  - '.git/'
+  - '*.md'
+  - '.user.yml'
+  - 'package-lock.yml'

@@ -16,25 +16,25 @@
 */
 
 SELECT
-  prd_id,
-  REPLACE(SUBSTRING(prd_key, 1, 5), '-', '_') AS cat_id, -- Extract category ID
-  SUBSTRING(prd_key, 7, LENGTH(prd_key)) AS prd_key,        -- Extract product key
-  prd_nm,
-  NULLIF(prd_cost, 0) AS prd_cost,
-  CASE 
-    WHEN UPPER(TRIM(prd_line)) = 'M' THEN 'Mountain'
-    WHEN UPPER(TRIM(prd_line)) = 'R' THEN 'Road'
-    WHEN UPPER(TRIM(prd_line)) = 'S' THEN 'Other Sales'
-    WHEN UPPER(TRIM(prd_line)) = 'T' THEN 'Touring'
-    ELSE 'n/a'
-  END AS prd_line, -- Map product line codes to descriptive values
-  CAST(prd_start_dt AS DATE) AS prd_start_dt,
-  CAST(
-    LEAD(TO_DATE(prd_start_dt, 'DD/MM/YYYY')) OVER (
-      PARTITION BY prd_key 
-      ORDER BY TO_DATE(prd_start_dt, 'DD/MM/YYYY')
-    ) - INTERVAL '1 day' 
-    AS DATE
-  ) AS prd_end_dt, -- Calculate end date as one day before the next start date
-  CURRENT_TIMESTAMP As dwh_create_date
+    prd_id,
+    prd_nm, -- Extract category ID
+    REPLACE(SUBSTRING(prd_key, 1, 5), '-', '_') AS cat_id,        -- Extract product key
+    SUBSTRING(prd_key, 7, LENGTH(prd_key)) AS prd_key,
+    NULLIF(prd_cost, 0) AS prd_cost,
+    CASE
+        WHEN UPPER(TRIM(prd_line)) = 'M' THEN 'Mountain'
+        WHEN UPPER(TRIM(prd_line)) = 'R' THEN 'Road'
+        WHEN UPPER(TRIM(prd_line)) = 'S' THEN 'Other Sales'
+        WHEN UPPER(TRIM(prd_line)) = 'T' THEN 'Touring'
+        ELSE 'n/a'
+    END AS prd_line, -- Map product line codes to descriptive values
+    CAST(prd_start_dt AS DATE) AS prd_start_dt,
+    CAST(
+        LEAD(TO_DATE(prd_start_dt, 'DD/MM/YYYY')) OVER (
+            PARTITION BY prd_key
+            ORDER BY TO_DATE(prd_start_dt, 'DD/MM/YYYY')
+        ) - INTERVAL '1 day'
+        AS DATE
+    ) AS prd_end_dt, -- Calculate end date as one day before the next start date
+    CURRENT_TIMESTAMP AS dwh_create_date
 FROM {{ ref("prd_info_bronze") }}
