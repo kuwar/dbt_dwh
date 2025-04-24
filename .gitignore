@@ -6,4 +6,4 @@ dbt_project/target/
 dbt_project/logs/dbt.log
 .vscode/
 dbt_project/dbt_packages/
-dbt_project/package-lock.yml
+dbt_project/package-lock.ymllogs/dbt.log
